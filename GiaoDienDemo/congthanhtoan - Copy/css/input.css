@@ -1,0 +1,10 @@
+﻿input {
+    width 160px;
+    height: 18px;
+    background-color: #cccccc;
+    background-image: url('/content/img/bg_input_text.gif');
+    border: 1px solid silver;
+    color: #000000;
+    font-size: 11px;
+    font-family: Verdana, Arial;
+}

@@ -1,0 +1,133 @@
+﻿.main {
+    width: 100%;
+}
+
+.g-row {
+    height: 20px;
+}
+
+.g-line {
+    height: 14px;
+    background-image: url('/content/img/bg_header.gif');
+}
+
+.g-same-row {
+    display: flex;
+    margin-top: 3px;
+    align-items: center;
+    font-family: Verdana, Arial, Tahoma;
+    color:red;
+    font-size: 11px;
+}
+
+.g-lable {
+    
+    width:150px;
+    font-weight:normal;
+    text-align:right;
+    margin-right:5px;
+}
+
+.g-center {
+    width: 800px;
+    margin: auto;
+    border: 1px solid gray;
+}
+
+    .g-center .g-content {
+        width: 796px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+
+.g-banner {
+    width: 795px;
+    height: 81px;
+    background-image: url('/content/img/banner.gif');
+}
+
+.g-footer {
+    height: 25px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    background-color: #C0E1F2;
+}
+
+    .g-footer .footer-center {
+        color: #333333;
+        font-family: Verdana,Arial,Tahoma;
+        font-size: 11px;
+        margin-left: 261px;
+    }
+
+    .g-footer .footer-right {
+        margin-top: 4px;
+    }
+
+.order {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+    .order .order-left {
+        width: 222px;
+        background-color: #ffffff;
+    }
+
+        .order .order-left .g-logo {
+            height: 100px;
+            background-repeat: no-repeat;
+            margin-left: 58px;
+            margin-top: 27px;
+            background-image: url('/content/img/logo_smartlink.gif');
+        }
+
+    .order .order-center .order-info {
+        background-color: #E1EDF9;
+        padding-top:10px;
+        padding-bottom:15px;
+        width: 340px;
+        border-color: #cccccc;
+        color: #333333;
+        font-family: Tahoma;
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    .order .order-right {
+        width: 222px;
+    }
+
+.payment-method {
+    margin-top:10px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+
+    .payment-method .method-left {
+        width: 222px;
+    }
+
+    .payment-method .method-center .method-info {
+        width: 340px;
+        background-color: #E1EDF9;
+        border-color: #cccccc;
+        color: #333333;
+        font-family: Tahoma;
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    .payment-method .method-right {
+        width: 222px;
+    }
+
+.g-scroll {
+    display: flex;
+    background-image: url('/content/img/bg_bank.gif');
+}
