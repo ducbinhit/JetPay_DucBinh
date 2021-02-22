@@ -157,8 +157,12 @@ class GatewayJS {
         }
     }
 
+    /**
+     * Lấy thông tin đơn hàng
+     * CreatedBy: NDBINH (22/02/2021)
+     * */
     initInforOrder() {
-        var name = GetParameterValues('tongtien');
+        var tongTien = GetParameterValues('tongtien');
         function GetParameterValues(param) {
             var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
             for (var i = 0; i < url.length; i++) {
@@ -168,6 +172,6 @@ class GatewayJS {
                 }
             }
         }
-        $('#txtGiaTriDonHang').val(name);
+        $('#txtGiaTriDonHang').val(tongTien + ' VND');
     }
 }
