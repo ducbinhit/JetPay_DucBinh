@@ -23,6 +23,7 @@
  * */
 class GatewayJS {
     constructor() {
+        this.initInforOrder();
         this.initCardYear();
         this.initCardMonth();
         this.showAtmCardName();
@@ -135,6 +136,8 @@ class GatewayJS {
      * CreatedBy: NDBINH (21/02/2021)
      * */
     eventWhenClickButtonPay() {
+        let thisHere = this;
+        $('.error-message').text('');
         // validate dữ liệu
         let inputValidates = $('input[required]');
         $.each(inputValidates, function (index, input) {
@@ -149,5 +152,22 @@ class GatewayJS {
             inputNotValidates[0].focus();
             return;
         }
+        else {
+            $('#g-btn-pay a').attr('href', 'verify.html');
+        }
+    }
+
+    initInforOrder() {
+        var name = GetParameterValues('tongtien');
+        function GetParameterValues(param) {
+            var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for (var i = 0; i < url.length; i++) {
+                var urlparam = url[i].split('=');
+                if (urlparam[0] == param) {
+                    return urlparam[1];
+                }
+            }
+        }
+        $('#txtGiaTriDonHang').val(name);
     }
 }

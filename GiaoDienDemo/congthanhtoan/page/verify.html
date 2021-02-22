@@ -45,10 +45,7 @@
                 <div class="payment-method">
                     <div class="method-left"></div>
                     <div class="method-center">
-                        <div class="error-message">
-                            <!--<img style="margin-right:6px; margin-top:2px;" src="/content/icon/error_icon.gif" />
-                            <div>Qúy khách vui lòng nhập đầy đủ thông tin.</div>-->
-                        </div>
+                        <div class="error-message"></div>
                         <fieldset class="method-info">
                             <legend>Chọn phương thức thanh toán</legend>
                             <div class="g-same-row">
@@ -64,37 +61,24 @@
                         <div class="method-input">
                             <div class="g-same-row">
                                 <div class="g-lable">Chọn ngân hàng ::</div>
-                                <div class="form-input">
-                                    <select name="selectBank" id="SelectBank">
-                                        <option value="D1133">VPBank</option>
-                                    </select>
-                                </div>
+                                <div class="form-input"><input type="text" name="Tên ngân hàng" value="VPBank" id="txtTenNganHang" readonly /></div>
                             </div>
                             <div class="g-same-row">
-                                <div class="g-lable">Nhập tên chủ thẻ ::</div>
-                                <div class="form-input"><input type="text" name="Tên chủ thẻ" id="txtTenChuThe" required /></div>
+                                <div class="g-lable">Nhập OTP ::</div>
+                                <div class="form-input"><input type="text" name="Mã OTP" id="txtMaOTP" required style="width: 70px;" /></div>
                             </div>
                             <div class="g-same-row">
-                                <div class="g-lable">Nhập số thẻ ::</div>
-                                <div class="form-input"><input type="text" name="Số thẻ" id="txtSoThe" required /></div>
-                            </div>
-                            <div class="g-same-row">
-                                <div class="g-lable">Nhập hiệu lực thẻ ::</div>
-                                <div class="form-input">
-                                    <select class="cardExpDate" style="width:50px; background-color:#ffffff" name="CardMonth" id="cardMonth"></select>
-                                    (mm)
-                                </div>
-                                <div class="form-input">
-                                    <select class="cardExpDate" style="width:50px; background-color:#ffffff" name="CardYear" id="cardYear"></select>
-                                    (yy)
-                                </div>
+                                <div class="g-lable">Nhập mã sau ::</div>
+                                <div class="form-input"><input type="text" name="Mã captcha" id="txtMaCaptcha" required style="width: 70px;" /></div>
+                                <img src="/content/img/democaptcha.png" />
                             </div>
                         </div>
+                        <div class="g-row"></div>
                         <div class="g-row"></div>
                         <div class="g-same-row">
                             <div class="g-lable"></div>
                             <button id="g-btn-cancel" title="Hủy">Hủy</button>
-                            <button id="g-btn-pay" title="Thanh toán"><a style="text-decoration:none; color:#084067;">Thanh toán</a></button>
+                            <button id="g-btn-pay" title="Thanh toán"><a hre>Thanh toán</a></button>
                         </div>
                         <div class="g-same-row">
                             <div class="align-right"><a style="color:blue;" href="#">Hướng dẫn giao dịch thanh toán an toàn</a></div>
@@ -104,14 +88,15 @@
                     <div class="method-right">
                         <div class="method-logo">
                             <img style="padding-bottom:10px;" src="/content/img/VPB_Large.jpg" />
-                            <img id="imgCardLogo" src="/content/img/default.jpg" />
                             <div class="logo-desc"></div>
                         </div>
                     </div>
                 </div>
                 <!-- end payment method -->
-                <div class="g-note"><span style="text-decoration:underline" class="font-bold">Lưu ý: </span>Bạn phải đăng ký thanh toán trực tuyến cho thẻ ghi nợ nội địa để tiếp tục thực hiện giao dịch. Trường hợp
-                chưa đăng ký, vui lòng liên hệ theo số điện thoại VPB 0243.9288880/ 1900 545415 hoặc tham khảo <span style="color:black;" class="font-bold">Tại đây</span> để biết thêm chi tiết</div>
+                <div class="g-note">
+                    <span style="text-decoration:underline" class="font-bold">Lưu ý: </span>Bạn phải đăng ký thanh toán trực tuyến cho thẻ ghi nợ nội địa để tiếp tục thực hiện giao dịch. Trường hợp
+                    chưa đăng ký, vui lòng liên hệ theo số điện thoại VPB 0243.9288880/ 1900 545415 hoặc tham khảo <span style="color:black;" class="font-bold">Tại đây</span> để biết thêm chi tiết
+                </div>
                 <div class="g-scroll">
                     <div id="bankscroll">
                         <img src="/content/img/VCB.png" alt="" />
@@ -155,6 +140,6 @@
         <div class="g-row"></div>
     </div>
     <script src="/lib/jquery-3.5.1.min.js"></script>
-    <script src="/js/gateway.js"></script>
+    <script src="/js/verify.js"></script>
 </body>
 </html>

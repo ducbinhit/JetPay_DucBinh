@@ -24,6 +24,7 @@
     color: #CCCCCC;
 }
 
+
 .g-note {
     padding: 0 40px 0 50px;
     font-family: Tahoma;
@@ -49,8 +50,8 @@
 
 .error-message {
     display:flex;
-    padding-left:66px;
-    text-align:center;
+    justify-content:center;
+    width:378px;
     margin-top:5px;
     font-family: Tahoma;
     color: #C63635;
@@ -111,9 +112,11 @@
         .order .order-left .g-logo {
             height: 100px;
             background-repeat: no-repeat;
-            margin-left: 53px;
-            margin-top: 27px;
-            background-image: url('/content/img/logo_smartlink.gif');
+            margin-left: 16px;
+            margin-right:16px;
+            margin-top: 35px;
+            background-size:contain;
+            background-image: url('https://jetpay.vn/wp-content/uploads/2021/01/logo.svg');
         }
 
     .order .order-center {
