@@ -45,6 +45,9 @@ class GatewayJS {
 
         // Thực hiện thanh toán khi nhấn nút thanh toán
         $('#g-btn-pay').click(this.eventWhenClickButtonPay.bind(thisInIt));
+
+        // Thực hiện xác thực thanh toán khi nhấn nút thanh toán
+        //$('.g-btn-pay-success').click(this.evenwhenclickbuttonpaysuccess.bind(thisinit));
     }
 
     /**
@@ -83,7 +86,7 @@ class GatewayJS {
     showAtmCardName() {
         var cardName = $('#txtTenChuThe');
         cardName.focus(function () {
-            $('#imgCardLogo').attr('src','/content/img/cardName.jpg')
+            $('#imgCardLogo').attr('src', '/content/img/cardName.jpg')
             $('.logo-desc').text('Vui lòng gõ tiếng Việt không dấu, chữ hoa hoặc chữ thường: "Nguyen Van A".');
         });
     }
@@ -153,7 +156,49 @@ class GatewayJS {
             return;
         }
         else {
-            $('#g-btn-pay a').attr('href', 'verify.html');
+            if (thisHere.FormMode == 'pay2') {
+                var codeOTP = '0000';
+                var codeCaptcha = 'UAE';
+                if ($('#txtMaOTP').val() == codeOTP) {
+                    if ($('#txtMaCaptcha').val() == codeCaptcha) {
+                        $('.payment-method').empty();
+                        $('.payment-method').append(`<div style="text-align:center; height: 306px; width:100%; font-family:Tahoma; font-size:14px; padding-top:20px; color: #519fcc">
+                        <span class="font-bold" style="color: #0A75C3;">Giao dịch thanh toán thành công.</span> <br />Cảm ơn quý khách đã sử dụng dịch vụ. Qúy khách sẽ được quay về trang của
+                        Đơn vị chấp nhận thẻ để tiếp tục giao dịch.<br /> Trong trường hợp không chuyển được, Qúy khách vui lòng bấm <span style="color:blue; text-decoration:underline;" class="font-bold">VÀO ĐÂY</span> để biết thêm chi tiết
+                    </div>`);
+                    }
+                    else {
+                        $('.error-message').append(`<img style="margin-right:6px; margin-top:2px;" src="/content/icon/error_icon.gif" />
+                            <div>Qúy khách vui lòng nhập chính xác chuỗi ký tự hiển thị bên dưới.</div>`);
+                    }
+                }
+                else {
+                    $('.error-message').append(`<img style="margin-right:6px; margin-top:2px;" src="/content/icon/error_icon.gif" />
+                            <div>Qúy khách nhập sai mật khẩu OTP, vui lòng nhập lại.</div>`);
+                }
+                return;
+            }
+            let inforInput = $('.method-input');
+            inforInput.empty();
+            inforInput.append(`<div class="g-same-row">
+                                <div class="g-lable">Chọn ngân hàng ::</div>
+                                <div class="form-input"><input type="text" name="Tên ngân hàng" value="VPBank" id="txtTenNganHang" readonly /></div>
+                            </div>
+                            <div class="g-same-row">
+                                <div class="g-lable">Nhập OTP ::</div>
+                                <div class="form-input"><input type="text" name="Mã OTP" id="txtMaOTP" required style="width: 70px;" /></div>
+                            </div>
+                            <div class="g-same-row">
+                                <div class="g-lable">Nhập mã sau ::</div>
+                                <div class="form-input"><input type="text" name="Mã captcha" id="txtMaCaptcha" required style="width: 70px;" /></div>
+                                <img src="/content/img/democaptcha.png" />
+                            </div>`);
+
+            $('#imgCardLogo').attr('src', '');
+            $('.logo-desc').text('');
+            $('.tutorial-security').empty();
+            this.FormMode = 'pay2';
+            this.initEventsOfGateway();
         }
     }
 
