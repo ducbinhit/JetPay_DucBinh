@@ -46,6 +46,9 @@ class GatewayJS {
         // Thực hiện thanh toán khi nhấn nút thanh toán
         $('#g-btn-pay').click(this.eventWhenClickButtonPay.bind(thisInIt));
 
+        // Thực hiện chuyển trang khi giao dịch thành công
+        $('#click-here').click(this.evenWhenClickHere.bind(thisInIt));
+
         // Thực hiện xác thực thanh toán khi nhấn nút thanh toán
         //$('.g-btn-pay-success').click(this.evenwhenclickbuttonpaysuccess.bind(thisinit));
     }
@@ -164,8 +167,13 @@ class GatewayJS {
                         $('.payment-method').empty();
                         $('.payment-method').append(`<div style="text-align:center; height: 306px; width:100%; font-family:Tahoma; font-size:14px; padding-top:20px; color: #519fcc">
                         <span class="font-bold" style="color: #0A75C3;">Giao dịch thanh toán thành công.</span> <br />Cảm ơn quý khách đã sử dụng dịch vụ. Qúy khách sẽ được quay về trang của
-                        Đơn vị chấp nhận thẻ để tiếp tục giao dịch.<br /> Trong trường hợp không chuyển được, Qúy khách vui lòng bấm <span style="color:blue; text-decoration:underline;" class="font-bold">VÀO ĐÂY</span> để biết thêm chi tiết
+                        Đơn vị chấp nhận thẻ để tiếp tục giao dịch.<br /> Trong trường hợp không chuyển được, Qúy khách vui lòng bấm <a id="click-here" style="color:blue; text-decoration:underline;" class="font-bold">VÀO ĐÂY</a> để biết thêm chi tiết
                     </div>`);
+                        this.initEventsOfGateway();
+                        setTimeout(function () {
+                            window.location = window.location.protocol +
+                                '//' + window.location.hostname + ':5001' + `/home/ordersuccess?order=1852925295&payment_processing=0`;
+                        }, 2000);
                     }
                     else {
                         $('.error-message').append(`<img style="margin-right:6px; margin-top:2px;" src="/content/icon/error_icon.gif" />
@@ -218,5 +226,14 @@ class GatewayJS {
             }
         }
         $('#txtGiaTriDonHang').val(tongTien + ' VND');
+    }
+
+    /**
+     * Thực hiện chuyển sang merchant
+     * CreatedBy: NDBINH (24/02/2021)
+     * */
+    evenWhenClickHere() {
+        window.location = window.location.protocol +
+            '//' + window.location.hostname + ':5001' + `/home/ordersuccess`;
     }
 }
