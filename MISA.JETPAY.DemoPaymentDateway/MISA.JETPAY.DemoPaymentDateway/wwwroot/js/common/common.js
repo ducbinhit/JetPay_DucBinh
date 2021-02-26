@@ -16,7 +16,6 @@ function formatMoney(money) {
 * CreatedBy: NDBINH (26/02/2021)
 **/
 async function getAccessToken() {
-    var accessToken = null;
     //var objReq = {
     //    grant_type: "password",
     //    client_id: "APITEST",
@@ -73,8 +72,8 @@ function getDataKeyAndNapasKey(accessToken) {
             "enable3DSecure": "false"
         },
         "order": {
-            "id": "ORD_892646",
-            "amount": "100000",
+            "id": "ORD_000008",
+            "amount": "150000",
             "currency": "VND"
         }
     }
@@ -86,8 +85,32 @@ function getDataKeyAndNapasKey(accessToken) {
             data: JSON.stringify(objReg),
             async: false
         }).done(function (res) {
-            console.log(res.dataKey);
-            console.log(res.napasKey);
+            var dataKey = res.dataKey;
+            var napasKey = res.napasKey;
+            console.log(dataKey);
+            console.log(napasKey);
+            $('#payment-napas').append(`<form id="merchant-form"
+          action="https://test-merchant.napas.com.vn/ecom3stg/finalHostedCheckout.jsp?merchantId=APITEST" method="POST"></form>
+    <div id="napas-widget-container"></div>
+    <script type="text/javascript"
+            id="napas-widget-script"
+            src="https://dps-staging.napas.com.vn/api/restjs/resources/js/napas.hostedform.min.js"
+            merchantId="APITEST"
+            clientIP="192.168.1.1"
+            deviceId="0123456789"
+            environment="WebApp"
+            cardScheme="AtmCard"
+            enable3DSecure="false"
+            orderId="ORD_000008"
+            dataKey="${dataKey}"
+            napasKey="${napasKey}"
+            apiOperation="PAY"
+            orderAmount="150000"
+            orderCurrency="VND"
+            orderReference="Thanh toan ORD_000001"
+            channel="6014"
+            sourceOfFundsType="CARD"></script>
+    </form>`)
         }).fail(function (res) {
 
         })
