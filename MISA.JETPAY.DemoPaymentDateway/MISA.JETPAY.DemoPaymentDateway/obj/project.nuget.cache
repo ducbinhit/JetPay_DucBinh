@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "+0fYNWFVoh7F8B79cFjeSvJyRoHZh0HdwqYtiEoKWwe/fP8aMaEO2CCiGDjINLzZaEt/mB/NK/t0Vdh6f0z1Bw==",
+  "dgSpecHash": "umCVOVylDLZLF6Wy3nFxJ6kPUTMv1FTH4RALdrQ1Wceci98W98yQQVMCckXYfm6NCaSPcULPpTnwygUTQif6Tg==",
   "success": true,
-  "projectFilePath": "E:\\IT\\Student\\JetPay\\ndbinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentGateway.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\ndbinh\\Source\\Repos\\MISA.Jetpay-Sourecode\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentGateway.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ndbinh\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

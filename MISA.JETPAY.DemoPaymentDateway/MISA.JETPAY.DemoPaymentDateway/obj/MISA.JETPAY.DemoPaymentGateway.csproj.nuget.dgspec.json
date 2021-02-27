@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "E:\\IT\\Student\\JetPay\\ndbinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentGateway.csproj": {}
+    "C:\\Users\\ndbinh\\Source\\Repos\\MISA.Jetpay-Sourecode\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentGateway.csproj": {}
   },
   "projects": {
-    "E:\\IT\\Student\\JetPay\\ndbinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentGateway.csproj": {
+    "C:\\Users\\ndbinh\\Source\\Repos\\MISA.Jetpay-Sourecode\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentGateway.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\IT\\Student\\JetPay\\ndbinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentGateway.csproj",
+        "projectUniqueName": "C:\\Users\\ndbinh\\Source\\Repos\\MISA.Jetpay-Sourecode\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentGateway.csproj",
         "projectName": "MISA.JETPAY.DemoPaymentGateway",
-        "projectPath": "E:\\IT\\Student\\JetPay\\ndbinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentGateway.csproj",
-        "packagesPath": "C:\\Users\\5SCOMPUTER\\.nuget\\packages\\",
-        "outputPath": "E:\\IT\\Student\\JetPay\\ndbinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway\\obj\\",
+        "projectPath": "C:\\Users\\ndbinh\\Source\\Repos\\MISA.Jetpay-Sourecode\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentGateway.csproj",
+        "packagesPath": "C:\\Users\\ndbinh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ndbinh\\Source\\Repos\\MISA.Jetpay-Sourecode\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\5SCOMPUTER\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\ndbinh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -43,6 +39,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -61,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

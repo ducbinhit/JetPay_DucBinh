@@ -12,10 +12,26 @@ function formatMoney(money) {
 }
 
 /**
-* Lấyaccesstoken
+ * Lấy giá trị paramter
+ * @param {any} param tên paramter
+ * CreatedBy: NDBINH (27/02/2021)
+ */
+function GetParameterValues(param) {
+    var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for (var i = 0; i < url.length; i++) {
+        var urlparam = url[i].split('=');
+        if (urlparam[0] == param) {
+            return urlparam[1];
+        }
+    }
+}
+
+/**
+* Lấy access token
 * CreatedBy: NDBINH (26/02/2021)
 **/
 async function getAccessToken() {
+    var accessToken = null;
     //var objReq = {
     //    grant_type: "password",
     //    client_id: "APITEST",
@@ -61,6 +77,11 @@ async function getAccessToken() {
     return getDataKeyAndNapasKey(accessToken);
 }
 
+/**
+ * Lấy datakey và napaskey
+ * @param {any} accessToken
+ * CreatedBy: NDBINH (27/02/2021)
+ */
 function getDataKeyAndNapasKey(accessToken) {
     var objReg = {
         "apiOperation": "DATA_KEY",
@@ -72,8 +93,8 @@ function getDataKeyAndNapasKey(accessToken) {
             "enable3DSecure": "false"
         },
         "order": {
-            "id": "ORD_000008",
-            "amount": "150000",
+            "id": "ORD_0000019",
+            "amount": "5000",
             "currency": "VND"
         }
     }
@@ -85,12 +106,12 @@ function getDataKeyAndNapasKey(accessToken) {
             data: JSON.stringify(objReg),
             async: false
         }).done(function (res) {
-            var dataKey = res.dataKey;
-            var napasKey = res.napasKey;
-            console.log(dataKey);
-            console.log(napasKey);
-            $('#payment-napas').append(`<form id="merchant-form"
-          action="https://test-merchant.napas.com.vn/ecom3stg/finalHostedCheckout.jsp?merchantId=APITEST" method="POST"></form>
+            var dKey = res.dataKey;
+            var nkey = res.napasKey;
+            console.log(res.dataKey);
+            console.log(res.napasKey);
+            $('.payment-napas').append(`<form id="merchant-form"
+          action="/Home/NapasResult" method="POST"></form>
     <div id="napas-widget-container"></div>
     <script type="text/javascript"
             id="napas-widget-script"
@@ -101,16 +122,15 @@ function getDataKeyAndNapasKey(accessToken) {
             environment="WebApp"
             cardScheme="AtmCard"
             enable3DSecure="false"
-            orderId="ORD_000008"
-            dataKey="${dataKey}"
-            napasKey="${napasKey}"
+            orderId="ORD_0000019"
+            dataKey="${dKey}"
+            napasKey="${nkey}"
             apiOperation="PAY"
-            orderAmount="150000"
+            orderAmount="5000"
             orderCurrency="VND"
-            orderReference="Thanh toan ORD_000001"
+            orderReference="Thanh toan ORD_89264"
             channel="6014"
-            sourceOfFundsType="CARD"></script>
-    </form>`)
+            sourceOfFundsType="CARD"></script>`)
         }).fail(function (res) {
 
         })
