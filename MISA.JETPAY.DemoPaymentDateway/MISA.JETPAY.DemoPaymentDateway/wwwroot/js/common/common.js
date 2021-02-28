@@ -93,8 +93,8 @@ function getDataKeyAndNapasKey(accessToken) {
             "enable3DSecure": "false"
         },
         "order": {
-            "id": "ORD_0000031",
-            "amount": "5000",
+            "id": "ORD_0000035",
+            "amount": "6000",
             "currency": "VND"
         }
     }
@@ -122,11 +122,11 @@ function getDataKeyAndNapasKey(accessToken) {
             environment="WebApp"
             cardScheme="AtmCard"
             enable3DSecure="false"
-            orderId="ORD_0000031"
+            orderId="ORD_0000035"
             dataKey="${dKey}"
             napasKey="${nkey}"
             apiOperation="PAY"
-            orderAmount="5000"
+            orderAmount="6000"
             orderCurrency="VND"
             orderReference="Thanh toan ORD_89264"
             channel="6014"

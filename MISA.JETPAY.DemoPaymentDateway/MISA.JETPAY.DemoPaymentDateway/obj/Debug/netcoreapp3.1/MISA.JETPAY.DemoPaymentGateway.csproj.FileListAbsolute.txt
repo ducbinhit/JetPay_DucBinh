@@ -87,3 +87,4 @@ E:\IT\Student\JetPay\ndbinh\MISA.JETPAY.DemoPaymentDateway\MISA.JETPAY.DemoPayme
 E:\IT\Student\JetPay\ndbinh\MISA.JETPAY.DemoPaymentDateway\MISA.JETPAY.DemoPaymentDateway\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
 E:\IT\Student\JetPay\ndbinh\MISA.JETPAY.DemoPaymentDateway\MISA.JETPAY.DemoPaymentDateway\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
 E:\IT\Student\JetPay\ndbinh\MISA.JETPAY.DemoPaymentDateway\MISA.JETPAY.DemoPaymentDateway\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\IT\Student\JetPay\ndbinh\MISA.JETPAY.DemoPaymentDateway\MISA.JETPAY.DemoPaymentDateway\obj\Debug\netcoreapp3.1\Razor\Views\Home\Test.cshtml.g.cs

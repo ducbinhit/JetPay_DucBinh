@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using MISA.JETPAY.DemoPaymentGateway.Models;
+@model DataNapas
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -23,14 +25,18 @@
                     </div>
                     <div class="order-center">
                         <fieldset class="order-info">
-                            <legend>Thông tin đơn hàng</legend>
+                            @{
+                                <legend>Thông tin đơn hàng @Model.id</legend>
+                                var amount = Model.amount;
+                            }
+
                             <div class="g-same-row">
                                 <div class="g-lable">Đơn hàng ::</div>
                                 <div class="form-input"><input type="text" name="" readonly value="Giao dich thang toan" id="txtDonHang" /></div>
                             </div>
                             <div class="g-same-row">
                                 <div class="g-lable">Giá trị đơn hàng ::</div>
-                                <div class="form-input"><input type="text" name="" readonly value="40,000.00 VND" id="txtGiaTriDonHang" /></div>
+                                <div class="form-input"><input type="text" name="" readonly value="@amount VND" id="txtGiaTriDonHang" /></div>
                             </div>
                             <div class="g-same-row">
                                 <div class="g-lable">Nhà cung cấp dịch vụ ::</div>
@@ -43,10 +49,23 @@
                 <div class="g-line"></div>
                 <!-- payment method -->
                 <div class="payment-method">
-                    <div style="text-align:center; height: 306px; width:100%; font-family:Tahoma; font-size:14px; padding-top:20px;">
-                        <span class="font-bold">Giao dịch thanh toán thành công.</span> <br />Cảm ơn quý khách đã sử dụng dịch vụ. Qúy khách sẽ được quay về trang của
-                        Đơn vị chấp nhận thẻ để tiếp tục giao dịch.<br /> Trong trường hợp không chuyển được, Qúy khách vui lòng bấm <span style="color:blue; text-decoration:underline;" class="font-bold">VÀO ĐÂY</span> để biết thêm chi tiết
-                    </div>
+                    @{
+                        var result = Model.result;
+                        if (result == "SUCCESS")
+                        {
+                            <div style="text-align:center; height: 306px; width:100%; font-family:Tahoma; font-size:14px; padding-top:20px;">
+                                <span class="font-bold">Giao dịch thanh toán thành công.</span> <br />Cảm ơn quý khách đã sử dụng dịch vụ. Qúy khách sẽ được quay về trang của
+                                Đơn vị chấp nhận thẻ để tiếp tục giao dịch.<br /> Trong trường hợp không chuyển được, Qúy khách vui lòng bấm <span style="color:blue; text-decoration:underline;" class="font-bold">VÀO ĐÂY</span> để biết thêm chi tiết
+                            </div>
+                        }
+                        else
+                        {
+                            <div style="text-align:center; height: 306px; width:100%; font-family:Tahoma; font-size:14px; padding-top:20px;">
+                                <span class="font-bold">Giao dịch thanh toán thất bại.</span> <br />Cảm ơn quý khách đã sử dụng dịch vụ. Qúy khách sẽ được quay về trang của
+                                Đơn vị chấp nhận thẻ để tiếp tục giao dịch.<br /> Trong trường hợp không chuyển được, Qúy khách vui lòng bấm <span style="color:blue; text-decoration:underline;" class="font-bold">VÀO ĐÂY</span> để biết thêm chi tiết
+                            </div>
+                        }
+                    }
                 </div>
                 <!-- end payment method -->
                 <div class="g-scroll">

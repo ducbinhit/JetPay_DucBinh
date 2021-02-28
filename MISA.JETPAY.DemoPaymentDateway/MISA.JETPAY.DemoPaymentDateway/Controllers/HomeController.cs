@@ -83,8 +83,7 @@ namespace MISA.JETPAY.DemoPaymentDateway.Controllers
 
             DataController dataController = new DataController();
             dataController.Post(data);
-
-            return View();
+            return View(data);
         }
     }
 }
