@@ -51,7 +51,8 @@ class GatewayJS {
 
         //Thực hiện thanh toán khi chọn thanh toán qua napas
         $('body').on('click', '.g-btn-pay-napas', function () {
-            getAccessToken();
+            //getAccessToken();
+            $('#txtDonHang').attr('checkPay', 'true');
         })
 
         // Thực hiện xác thực thanh toán khi nhấn nút thanh toán

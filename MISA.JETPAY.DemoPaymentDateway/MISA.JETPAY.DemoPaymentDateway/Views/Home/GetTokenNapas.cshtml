@@ -1,0 +1,33 @@
+﻿@using MISA.JETPAY.DemoPaymentGateway.Models;
+@model GetTokenResData
+@{ 
+    var dataKey = Model.dataKey;
+    var napasKey = Model.napasKey;
+    var id = Model.order.id;
+    var amount = Model.order.amount;
+}
+<div>
+    @{
+        <form id="merchant-form"
+              action="https://localhost:44322/Home/NapasResult" method="POST"></form>
+        <div id="napas-widget-container"></div>
+        <script type="text/javascript"
+                id="napas-widget-script"
+                src="https://dps-staging.napas.com.vn/api/restjs/resources/js/napas.paymentpage.min.js"
+                merchantId="APITEST"
+                clientIP="192.168.1.1"
+                deviceId="0123456789"
+                environment="WebApp"
+                cardScheme="AtmCard"
+                enable3DSecure="false"
+                orderId="@id"
+                dataKey="@dataKey"
+                napasKey="@napasKey"
+                apiOperation="PAY"
+                orderAmount="@amount"
+                orderCurrency="VND"
+                orderReference="Thanh toan @id"
+                channel="6014"
+                sourceOfFundsType="CARD"></script>
+    }
+</div>

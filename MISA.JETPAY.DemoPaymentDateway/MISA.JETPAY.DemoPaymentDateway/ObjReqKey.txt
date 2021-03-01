@@ -1,0 +1,15 @@
+﻿{
+    "apiOperation": "DATA_KEY",
+    "inputParameters": {
+        "clientIP": "192.168.1.1",
+        "deviceId": "0123456789",
+        "environment": "WebApp",
+        "cardScheme": "AtmCard",
+        "enable3DSecure": "false"
+    },
+    "order": {
+        "id": "ORD_892646",
+        "amount": "100000",
+        "currency": "VND"
+    }
+}

@@ -1,4 +1,21 @@
-﻿<!DOCTYPE html>
+﻿@using MISA.JETPAY.DemoPaymentGateway.Models;
+
+@model GetTokenResData 
+@{
+    var dataKey = string.Empty;
+    var napasKey = string.Empty;
+    var amount = string.Empty;
+    var id = string.Empty;
+    if(Model.order!=null)
+    {
+        dataKey = Model.dataKey ?? string.Empty;
+        napasKey = Model.napasKey ?? string.Empty;
+        id = Model.order.id ?? string.Empty;
+        amount = Model.order.amount ?? string.Empty;
+    }
+
+}
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -26,7 +43,7 @@
                             <legend>Thông tin đơn hàng</legend>
                             <div class="g-same-row">
                                 <div class="g-lable">Đơn hàng ::</div>
-                                <div class="form-input"><input type="text" name="" readonly value="Giao dich thang toan" id="txtDonHang" /></div>
+                                <div class="form-input"><input checkPay="false" type="text" name="" readonly value="Giao dich thang toan" id="txtDonHang" /></div>
                             </div>
                             <div class="g-same-row">
                                 <div class="g-lable">Giá trị đơn hàng ::</div>
@@ -93,7 +110,7 @@
                         <div class="g-same-row group-button">
                             <div class="g-lable"></div>
                             <button id="g-btn-cancel" title="Hủy">Hủy</button>
-                            <button id="g-btn-pay" class="g-btn-pay-napas" title="Thanh toán"><a style="text-decoration:none; color:#084067;">Thanh toán</a></button>
+                            <button id="g-btn-pay" class="g-btn-pay-napas" title="Thanh toán"><a href="https://localhost:44322/Home/GetTokenNapas" style="text-decoration:none; color:#084067;">Thanh toán</a></button>
                         </div>
                         <div class="g-same-row">
                             <div class="align-right tutorial-security"><a style="color:blue;" href="#">Hướng dẫn giao dịch thanh toán an toàn</a></div>
@@ -154,6 +171,34 @@
             </div>
         </div>
         <div class="g-row"></div>
+        <div>
+            @{
+                if (!string.IsNullOrEmpty(dataKey))
+                {
+                    <form id="merchant-form"
+                          action="https://localhost:44322/Home/NapasResult" method="POST"></form>
+                    <div id="napas-widget-container"></div>
+                    <script type="text/javascript"
+                            id="napas-widget-script"
+                            src="https://dps-staging.napas.com.vn/api/restjs/resources/js/napas.hostedform.min.js"
+                            merchantId="APITEST"
+                            clientIP="192.168.1.1"
+                            deviceId="0123456789"
+                            environment="WebApp"
+                            cardScheme="AtmCard"
+                            enable3DSecure="false"
+                            orderId="@id"
+                            dataKey="@dataKey"
+                            napasKey="@napasKey"
+                            apiOperation="PAY"
+                            orderAmount="@amount"
+                            orderCurrency="VND"
+                            orderReference="Thanh toan @id"
+                            channel="6014"
+                            sourceOfFundsType="CARD"></script>
+                }
+            }
+        </div>
         <div class="payment-napas"></div>
     </div>
     <script src="/lib/jquery-3.5.1.min.js"></script>

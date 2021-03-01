@@ -25,10 +25,8 @@ namespace MISA.JETPAY.DemoPaymentDateway.Controllers
 
         public IActionResult gateway()
         {
-            // Call api token 
-            // call api=> datakey and napaskey
-
-            return View();
+            var result = new GetTokenResData();
+            return View(result);
         }
 
         public IActionResult Privacy()
@@ -77,13 +75,72 @@ namespace MISA.JETPAY.DemoPaymentDateway.Controllers
                 data.creationTime = myJObject.SelectToken("$.paymentResult.order.creationTime").Value<DateTime>();
                 data.id = myJObject.SelectToken("$.paymentResult.order.id").Value<string>();
             }
-            
-
-
-
+            // Lưu dữ liệu lên database
             DataController dataController = new DataController();
             dataController.Post(data);
             return View(data);
+        }
+
+        /// <summary>
+        /// API lấy token từ bên napas
+        /// </summary>
+        /// <returns></returns>
+        public  IActionResult GetTokenNapas()
+        {
+            try
+            {
+                // Lấy access_token
+                var url = "https://dps-staging.napas.com.vn/api/oauth/token";
+                var objReq = new GetTokenReq
+                {
+                    grant_type = "password",
+                    client_id = "APITEST",
+                    client_secret = "TT3F6AM5UQZXJEJXAWJ8CHVC9ZJ02A51",
+                    username = "apitest",
+                    password = "fPJFVp5qnCWeFmtd"
+                };
+                var result =  CommonFunction.CallAPIService<GetTokenRes>(url, "post", "application/x-www-form-urlencoded", CommonFunction.GetQueryString(objReq), null);
+
+                // Lấy dataKey và napasKey
+                var inputParameterReq = new InputParameters
+                {
+                    clientIP = "192.168.1.1",
+                    deviceId = "0123456789",
+                    environment = "WebApp",
+                    cardScheme = "AtmCard",
+                    enable3DSecure = "false"
+                };
+                var orderReq = new Order
+                {
+                    id = "ORD_005",
+                    amount = "100000",
+                    currency = "VND"
+                };
+                var objReqKey = new GetTokenKey
+                {
+                    apiOperation = "DATA_KEY",
+                    inputParameters = inputParameterReq,
+                    order = orderReq
+                };
+                Dictionary<string, string> header = new Dictionary<string, string>();
+                header.Add("Authorization", "Bearer "+ result.access_token);
+                var accessToken = result.access_token;
+                var objReqString = JsonConvert.SerializeObject(objReqKey);
+                var url1 = $"https://dps-staging.napas.com.vn/api/rest/version/32/merchant/APITEST/datakey?access_token={accessToken}";
+                //var url1 = "https://dps-staging.napas.com.vn/api/rest/version/32/merchant/APITEST/datakey";
+                //var resultKey = CommonFunction.CallAPIService<GetTokenResData>(url1, "post", "application/json", objReqString, header);
+                var resultKey =  CommonFunction.CallAPIService<GetTokenResData>(url1, "post", "application/json", objReqString, null);
+
+                //Đọc json từ file txt
+                //var obj = System.IO.File.ReadAllText("C:/Users/ndbinh/source/repos/JetPay_DucBinh/MISA.JETPAY.DemoPaymentDateway/MISA.JETPAY.DemoPaymentDateway/ObjReqKey.txt");
+                //return View(resultKey);
+                return View("gateway", resultKey);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            
         }
     }
 }
