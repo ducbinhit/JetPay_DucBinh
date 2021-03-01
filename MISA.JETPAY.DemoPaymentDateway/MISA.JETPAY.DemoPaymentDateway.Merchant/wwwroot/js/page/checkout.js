@@ -16,7 +16,7 @@ class CheckOutJS {
             nameBank = $(this).find("div").attr("id");
         })
 
-       // click thanh toán
+        // click thanh toán
         $(".btn-access").click(function () {
             $(".payment").css("display", "none");
             $('.option-bank').show();
@@ -40,10 +40,13 @@ class CheckOutJS {
 
         // thực hiện thanh toán khi click vao button thanh toán
         $('.btn-pay').click(this.evenWhenClickButtonPay);
+
+        // lấy thông tin đơn hàng
+        this.initInforOrder();
         /*let tongtien = $('#txtTongTien').val();
         let nameBank = $('#nameBank').text();*/
 
-    
+
     }
     /*
      * Hàm chuyển thông tin dữ liệu sang cổng thanh toán
@@ -53,12 +56,15 @@ class CheckOutJS {
     evenWhenClickButtonPay() {
         let tongtien = $('#txtTongTien').val();
         let nameBank = $('#nameBank').text();
+        let maHoaDon = $('#txtMaHoaDon').val();
         // $('.btn-pay button').attr('href', `home/gateway?tongtien=${tongtien}&bank=${nameBank}`);
 
         window.location = window.location.protocol +
-            '//' + window.location.hostname + ':44322' + `/home/gateway?merchantId="Senpay"&id="HD0001"&tongtien=${tongtien}&bank=${nameBank}`;
+            '//' + window.location.hostname + ':44322' + `/home/gateway?merchantId="Senpay"&orderId=${maHoaDon}&amount=${tongtien}`;
 
     }
+
+
 
 
 }

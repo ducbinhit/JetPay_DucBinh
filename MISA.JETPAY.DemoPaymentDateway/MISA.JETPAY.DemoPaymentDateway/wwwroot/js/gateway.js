@@ -221,7 +221,9 @@ class GatewayJS {
      * CreatedBy: NDBINH (22/02/2021)
      * */
     initInforOrder() {
-        var tongTien = GetParameterValues('tongtien');
+        var tongTien = GetParameterValues('amount');
+        var orderId = GetParameterValues('orderId');
+        $('#txtDonHang').val(orderId);
         $('#txtGiaTriDonHang').val(tongTien + ' VND');
     }
 

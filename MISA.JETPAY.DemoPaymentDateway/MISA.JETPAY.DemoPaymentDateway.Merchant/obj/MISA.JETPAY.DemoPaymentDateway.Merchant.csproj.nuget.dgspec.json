@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ndbinh\\source\\repos\\JetPay_DucBinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway.Merchant\\MISA.JETPAY.DemoPaymentDateway.Merchant.csproj": {}
+    "E:\\IT\\Student\\JetPay\\ndbinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway.Merchant\\MISA.JETPAY.DemoPaymentDateway.Merchant.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ndbinh\\source\\repos\\JetPay_DucBinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway.Merchant\\MISA.JETPAY.DemoPaymentDateway.Merchant.csproj": {
+    "E:\\IT\\Student\\JetPay\\ndbinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway.Merchant\\MISA.JETPAY.DemoPaymentDateway.Merchant.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ndbinh\\source\\repos\\JetPay_DucBinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway.Merchant\\MISA.JETPAY.DemoPaymentDateway.Merchant.csproj",
+        "projectUniqueName": "E:\\IT\\Student\\JetPay\\ndbinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway.Merchant\\MISA.JETPAY.DemoPaymentDateway.Merchant.csproj",
         "projectName": "MISA.JETPAY.DemoPaymentDateway.Merchant",
-        "projectPath": "C:\\Users\\ndbinh\\source\\repos\\JetPay_DucBinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway.Merchant\\MISA.JETPAY.DemoPaymentDateway.Merchant.csproj",
-        "packagesPath": "C:\\Users\\ndbinh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ndbinh\\source\\repos\\JetPay_DucBinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway.Merchant\\obj\\",
+        "projectPath": "E:\\IT\\Student\\JetPay\\ndbinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway.Merchant\\MISA.JETPAY.DemoPaymentDateway.Merchant.csproj",
+        "packagesPath": "C:\\Users\\5SCOMPUTER\\.nuget\\packages\\",
+        "outputPath": "E:\\IT\\Student\\JetPay\\ndbinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway.Merchant\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ndbinh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\5SCOMPUTER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -57,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

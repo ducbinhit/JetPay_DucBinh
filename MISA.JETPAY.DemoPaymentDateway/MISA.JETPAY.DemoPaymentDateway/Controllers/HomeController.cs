@@ -28,6 +28,15 @@ namespace MISA.JETPAY.DemoPaymentDateway.Controllers
             var result = new GetTokenResData();
             return View(result);
         }
+        [HttpPost]
+        public IActionResult gateway(GetTokenResData dl)
+        {
+            string orderId = dl.order.id;
+            string amount = dl.order.amount;
+            string[] arrListStr = amount.Split(' ');
+            amount = arrListStr[0];
+            return GetTokenNapas(orderId, amount);
+        }
 
         public IActionResult Privacy()
         {
@@ -85,7 +94,7 @@ namespace MISA.JETPAY.DemoPaymentDateway.Controllers
         /// API lấy token từ bên napas
         /// </summary>
         /// <returns></returns>
-        public  IActionResult GetTokenNapas()
+        public  IActionResult GetTokenNapas(string orderId, string amount)
         {
             try
             {
@@ -112,8 +121,8 @@ namespace MISA.JETPAY.DemoPaymentDateway.Controllers
                 };
                 var orderReq = new Order
                 {
-                    id = "ORD_005",
-                    amount = "100000",
+                    id = orderId,
+                    amount = amount,
                     currency = "VND"
                 };
                 var objReqKey = new GetTokenKey
