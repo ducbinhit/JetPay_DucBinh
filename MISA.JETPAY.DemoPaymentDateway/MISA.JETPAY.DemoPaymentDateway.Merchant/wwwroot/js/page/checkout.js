@@ -52,6 +52,8 @@ class CheckOutJS {
 
         });
 
+        $('#txtMaHoaDon').val(autoGenCode());
+
 
         /*let tongtien = $('#txtTongTien').val();
         let nameBank = $('#nameBank').text();*/
@@ -73,6 +75,7 @@ class CheckOutJS {
             '//' + window.location.hostname + ':44322' + `/home/gateway?merchantId="APITEST"&orderId=${maHoaDon}&amount=${tongtien}`;
 
     }
+    
 
 
 

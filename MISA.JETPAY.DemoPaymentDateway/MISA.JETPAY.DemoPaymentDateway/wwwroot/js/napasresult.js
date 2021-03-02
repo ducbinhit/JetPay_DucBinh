@@ -23,6 +23,7 @@
  * */
 class NapasResultJS {
     constructor() {
+        this.initInforOrder();
         this.initEventsOfGateway();
     }
 
@@ -116,5 +117,15 @@ class NapasResultJS {
             window.location = window.location.protocol +
                 '//' + window.location.hostname + ':5001' + `/home/confirm?orderId=${orderId}&payment_processing=${result}&merchantId=${merchantId}&amount=${tongtien}`;
         }, 4000);
+    }
+    /**
+    * Lấy thông tin đơn hàng
+    * CreatedBy: NDBINH (22/02/2021)
+    * */
+    initInforOrder() {
+        var tongTien = GetParameterValues('amount');
+        var orderId = GetParameterValues('orderId');
+        $('#txtDonHang').val(orderId);
+        $('#txtGiaTriDonHang').val(tongTien + ' VND');
     }
 }

@@ -234,6 +234,9 @@ class GatewayJS {
         var orderId = GetParameterValues('orderId');
         $('#txtDonHang').val(orderId);
         $('#txtGiaTriDonHang').val(tongTien + ' VND');
+
+        var urlAction = "https://localhost:44322/Home/NapasResult" + "?orderId=" + orderId + "&amount=" + tongTien;
+        $('#merchant-form').attr("action", urlAction);
     }
 
     /**

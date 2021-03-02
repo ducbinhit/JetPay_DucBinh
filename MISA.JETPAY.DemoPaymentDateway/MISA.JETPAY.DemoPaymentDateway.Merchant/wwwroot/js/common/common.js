@@ -12,3 +12,12 @@ function GetParameterValues(param) {
         }
     }
 }
+
+/**
+ * Tự động gen mã code*/
+function autoGenCode() {
+    var x = Math.floor((Math.random() * 1000000) + 1);
+    var y = "ORD" + Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 3);
+    var xy = y + "_" + x;
+    return xy;
+}
