@@ -40,7 +40,7 @@ a{
     .content .title {
         height: 50px;
         width: 100%;
-        background-color: white;
+        background-color: #f1f1f1;
         margin-bottom: 16px;
     }
         .content .title .text-confirm {

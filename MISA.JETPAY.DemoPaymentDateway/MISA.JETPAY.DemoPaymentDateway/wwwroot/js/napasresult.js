@@ -110,9 +110,11 @@ class NapasResultJS {
         let orderId = $('#txtDonHang').val();
         let amount = $('#txtGiaTriDonHang').val();
         var tongtien = amount.split(" ", 1);
+        var result = $('#orderResult').text();
+        var merchantId = $('#merchantId').text();
         setTimeout(function () {
             window.location = window.location.protocol +
-                '//' + window.location.hostname + ':5001' + `/home/confirm?orderId=${orderId}&amount=${tongtien}`;
-        }, 3000);
+                '//' + window.location.hostname + ':5001' + `/home/confirm?orderId=${orderId}&payment_processing=${result}&merchantId=${merchantId}&amount=${tongtien}`;
+        }, 4000);
     }
 }

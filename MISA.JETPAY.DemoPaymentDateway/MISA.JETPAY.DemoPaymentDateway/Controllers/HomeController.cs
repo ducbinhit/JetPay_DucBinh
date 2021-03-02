@@ -84,6 +84,10 @@ namespace MISA.JETPAY.DemoPaymentDateway.Controllers
                 data.creationTime = myJObject.SelectToken("$.paymentResult.order.creationTime").Value<DateTime>();
                 data.id = myJObject.SelectToken("$.paymentResult.order.id").Value<string>();
             }
+            else if(data.result == "ERROR")
+            {
+                data.id = myJObject.SelectToken("$.paymentResult.order.id").Value<string>();
+            }
             // Lưu dữ liệu lên database
             DataController dataController = new DataController();
             dataController.Post(data);

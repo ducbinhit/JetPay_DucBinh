@@ -55,6 +55,15 @@ class GatewayJS {
             $('#txtDonHang').attr('checkPay', 'true');
         })
 
+        $('.method-info input').on('change', function () {
+            var value = $('input[name=payment]:checked').val();
+            if (value == "1") {
+                $('.method-input').css("display", "none");
+            }
+            else {
+                $('.method-input').css("display", "block");
+            }
+        });
         // Thực hiện xác thực thanh toán khi nhấn nút thanh toán
         //$('.g-btn-pay-success').click(this.evenwhenclickbuttonpaysuccess.bind(thisinit));
     }

@@ -86,15 +86,15 @@
                             <fieldset class="method-info">
                                 <legend>Chọn phương thức thanh toán</legend>
                                 <div class="g-same-row">
-                                    <input type="radio" name="payment" id="napaspay" />
+                                    <input type="radio" name="payment" id="napaspay" value="1"/>
                                     <p>Thanh toán qua NAPAS</p>
                                 </div>
                                 <div class="g-same-row">
-                                    <input type="radio" name="payment" />
+                                    <input type="radio" name="payment" value="2" />
                                     <p>Thẻ ATM, tài khoản mở tại ngân hàng Việt Nam</p>
                                 </div>
                             </fieldset>
-                            <div class="method-input">
+                            <div class="method-input" style="display:none;">
                                 <div class="g-same-row">
                                     <div class="g-lable">Chọn ngân hàng ::</div>
                                     <div class="form-input">
@@ -105,11 +105,11 @@
                                 </div>
                                 <div class="g-same-row">
                                     <div class="g-lable">Nhập tên chủ thẻ ::</div>
-                                    <div class="form-input"><input type="text" name="Tên chủ thẻ" id="txtTenChuThe" required /></div>
+                                    <div class="form-input"><input type="text" name="Tên chủ thẻ" id="txtTenChuThe" /></div>
                                 </div>
                                 <div class="g-same-row">
                                     <div class="g-lable">Nhập số thẻ ::</div>
-                                    <div class="form-input"><input type="text" name="Số thẻ" id="txtSoThe" required /></div>
+                                    <div class="form-input"><input type="text" name="Số thẻ" id="txtSoThe" /></div>
                                 </div>
                                 <div class="g-same-row">
                                     <div class="g-lable">Nhập hiệu lực thẻ ::</div>
@@ -136,7 +136,7 @@
                             <div class="g-row"></div>
                         </div>
                         <div class="method-right">
-                            <div class="method-logo">
+                            <div class="method-logo" style="display:none;">
                                 <img style="padding-bottom:10px;" src="/content/img/VPB_Large.jpg" />
                                 <img id="imgCardLogo" src="/content/img/default.jpg" />
                                 <div class="logo-desc"></div>

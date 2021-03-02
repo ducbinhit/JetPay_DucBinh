@@ -38,11 +38,21 @@ class CheckOutJS {
             $(".payment").show();
         })
 
+        //Kiểm tra giá trị phương thức thanh toán
+        var value = "";
+        $('.panel-content input').on('change', function () {
+            value = $('input[name=paymentMethod]:checked').val();
+        });
         // thực hiện thanh toán khi click vao button thanh toán
-        $('.btn-pay').click(this.evenWhenClickButtonPay);
+        $('.btn-pay').click(function () {
+            // Nếu phương thức thanh toán là JetPay thì thực hiện thanh toán :))
+            if (value == "JetPay") {
+                me.evenWhenClickButtonPay();
+            }
 
-        // lấy thông tin đơn hàng
-        this.initInforOrder();
+        });
+
+
         /*let tongtien = $('#txtTongTien').val();
         let nameBank = $('#nameBank').text();*/
 
@@ -60,7 +70,7 @@ class CheckOutJS {
         // $('.btn-pay button').attr('href', `home/gateway?tongtien=${tongtien}&bank=${nameBank}`);
 
         window.location = window.location.protocol +
-            '//' + window.location.hostname + ':44322' + `/home/gateway?merchantId="Senpay"&orderId=${maHoaDon}&amount=${tongtien}`;
+            '//' + window.location.hostname + ':44322' + `/home/gateway?merchantId="APITEST"&orderId=${maHoaDon}&amount=${tongtien}`;
 
     }
 

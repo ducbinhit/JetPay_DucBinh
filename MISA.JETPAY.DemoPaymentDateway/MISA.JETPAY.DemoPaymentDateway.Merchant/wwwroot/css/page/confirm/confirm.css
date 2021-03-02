@@ -9,15 +9,13 @@
     .complate .img {
         position: relative;
         top: 80px;
-        left: calc(100% - 60%);
+        left: calc(100% - 56%);
         height: 150px;
         width: 150px;
-        border-radius: 100px;
         background-image: url('../../../image/success-payment.png');
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        background-color: #c6e696;
     }
 
     .complate .title {
@@ -30,8 +28,14 @@
     }
 
 .info {
-    height: 220px;
     width: 60%;
+    background-color: #f1f1f1;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+.info-failure {
+    width: 30%;
     background-color: #f1f1f1;
     background-color: white;
     margin-left: auto;
@@ -53,19 +57,16 @@
 
 .info .button-order {
     position: relative;
-    height: 100px
 }
 
 button {
-    position: relative;
-    top: 20px;
-    left: calc(100% - 70%);
-    height: 40px;
+    height: 42px;
     width: 200px;
-    margin: 0 10px 0 5px;
     border-radius: 20px;
     border: 1px solid #81a528;
     outline: none;
+    margin-bottom: 24px;
+    margin-right:20px;
 }
 
 #detail {

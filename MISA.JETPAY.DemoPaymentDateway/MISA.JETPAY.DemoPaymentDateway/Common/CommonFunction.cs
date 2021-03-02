@@ -16,11 +16,28 @@ namespace MISA.JETPAY.DemoPaymentGateway.Common
             var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(plainText);
             return System.Convert.ToBase64String(plainTextBytes);
         }
+        /// <summary>
+        /// Giải mã dạng base 64
+        /// </summary>
+        /// <param name="base64EncodedData">Chuỗi ký tự dạng base64</param>
+        /// <returns></returns>
+        /// CreatedBy: NDBINH (01/03/2021)
         public static string Base64Decode(string base64EncodedData)
         {
             var base64EncodedBytes = System.Convert.FromBase64String(base64EncodedData);
             return System.Text.Encoding.UTF8.GetString(base64EncodedBytes);
         }
+
+        /// <summary>
+        /// Gọi API Server
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="url">url</param>
+        /// <param name="action">Phương thức</param>
+        /// <param name="contentType">Content type</param>
+        /// <param name="jsonData">Data</param>
+        /// <param name="header">Header</param>
+        /// <returns></returns>
         public static T CallAPIService<T>(string url,string action,string contentType,string jsonData,Dictionary<string,string> header)
         {
             var httpWebrequest = (HttpWebRequest)WebRequest.Create(url);
