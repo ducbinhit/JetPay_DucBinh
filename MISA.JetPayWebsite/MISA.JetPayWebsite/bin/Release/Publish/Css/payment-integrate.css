@@ -1,0 +1,46 @@
+﻿
+/*nvthanh*/
+.list-type-integrate {
+    font-size: 13px;
+}
+.list-type-integrate .type-integrate-item {
+    /*display: inline-flex;*/
+    padding:  16px 8px;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    
+}
+.list-type-integrate .type-integrate-item a {
+    color: #777;
+    text-decoration: none;
+}
+.list-type-integrate .type-integrate-item img {
+    margin-top: 4px;
+    width: 8px;
+    height: 8px;
+}
+
+.list-type-integrate .type-integrate-item .title-type-integrate {
+    margin-left: 5px;
+}
+
+.list-sub-type-integrate {
+    padding-left: 30px;
+}
+
+.introduce,.process-integration{
+    margin-top: 40px;
+}
+
+.content-integrate .introduce .content {
+    margin-top: 10px;
+
+}
+.color-red {
+    color: #c72828;
+    text-decoration: none;
+}
+.color-red:hover{
+    color: #CC0000;
+    text-decoration: none;
+}

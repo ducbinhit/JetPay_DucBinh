@@ -1,0 +1,137 @@
+﻿.x-padding-none {
+    padding: 0;
+}
+
+.home-payment-header {
+    position: relative;
+    margin-top: 55px;
+    width: 100%;
+    background: #0dcc97;
+    background-image: url('../Content/Image/bg_blockchain_banking_.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home-payment .solution-item .content-solution {
+    margin-top: 16px;
+    text-align: left;
+}
+
+.home-payment .solution-item .icon-box2 {
+    float: left;
+    margin: -17px 10px 0 0;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border: 0 none #f5fffa;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.home-payment .solution-item .title-box {
+    text-align: left;
+}
+
+.left-content {
+    position: relative;
+    padding: 0;
+    width: 100%;
+    background: #0dcc97;
+    background-image: url('../Content/Image/bg_payments.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.right-content {
+    position: relative;
+    text-align: center;
+    padding: calc(15% - 95px) 0;
+    text-shadow: 3px 4px 5px rgba(0,0,0,0.3);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+    .right-content.title {
+        color: #f1f1f1;
+    }
+
+.big-title {
+    font-size: 4.6em;
+}
+
+.medium-title {
+    font-size: 1.8em;
+}
+
+.small-title {
+    font-size: 20px;
+    line-height: 18px;
+}
+
+@media only screen and (max-width: 900px) {
+    .right-content {
+        text-align: center;
+        padding: 15% 0 20px 0;
+    }
+
+    .left-content {
+        padding: 20px;
+    }
+
+    .big-title {
+        font-size: 36px;
+    }
+
+    .medium-title {
+        font-size: 18px;
+    }
+
+    .small-title {
+        font-size: 15px;
+        line-height: 18px;
+        
+    }
+}
+
+
+.solution-item:hover {
+    box-shadow: 0px 6px 10px 0px rgba(204,204,204,1);
+}
+
+
+
+.home-payment .solution-item:hover .icon-box {
+    
+}
+.x-icon{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.icon-credit-card {
+    background-image: url('../Content/Icon/ic_credit_card.png');
+}
+.icon-computer-testing {
+    background-image: url('../Content/Icon/ic_testing.png');
+}
+.icon-transfer-bank {
+    background-image: url('../Content/Icon/ic_transfer_bank.png');
+}
+.icon-qr-code {
+    background-image: url('../Content/Icon/ic_qr_code.png');
+}
+.icon-wallet {
+    background-image: url('../Content/Icon/ic_wallet.png');
+}
+.icon-pos-kiosk {
+    background-image: url('../Content/Icon/ic_pos_kiosk.png');
+}
+.icon-transfer-money {
+    background-image: url('../Content/Icon/ic_transfer_money.png');
+}
+.icon-paybill {
+    background-image: url('../Content/Icon/ic_paybills.png');
+}
+

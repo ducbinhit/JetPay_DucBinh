@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="icon" type="image/png" href="~/Content/Image/Logo_JetPay/favicon.PNG" />
+    <link href="~/Css/Common/bootstrap.min.css" rel="stylesheet" />
+    @* Semantic lib *@
+    <link href="~/Css/Common/Semantic/components/icon.min.css" rel="stylesheet" />
+    <link href="~/Css/Common/Semantic/components/accordion.min.css" rel="stylesheet" />
+    @* End *@
+    <link href="~/Css/Common/custom_semantic.css" rel="stylesheet" />
+    <link href="~/Css/index.css" rel="stylesheet" />
+    <link href="~/Css/home_payment.css" rel="stylesheet" />
+    <link href="~/Css/payment-integrate.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top cus-navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="c-navbar-brand navbar-brand logo" href="#"><div></div></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse in" aria-expanded="true" style="">
+                <ul class="nav navbar-nav header-left">
+                    <li class="show-modal-pending">
+                        <a>
+                            Cá nhân
+                        </a>
+                    </li>
+                    <li class="show-modal-pending">
+                        <a>
+                            <div>Doanh nghiệp</div>
+                        </a>
+                    </li>
+                    <li class="show-modal-pending">
+                        <a>
+                            <div>Tin tức</div>
+                        </a>
+                    </li>
+                    <li class="show-modal-pending">
+                        <a>
+                            <div>Hỗ trợ</div>
+                        </a>
+                    </li>
+                    @*<li>
+                        <a href="@Url.Action("Overview", $"JetPayPaymentIntegrate")">
+                            <div>Hỗ trợ</div>
+                        </a>
+                    </li>*@
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+    </nav>
+    <div class="page-content">
+        <div>
+            @RenderBody()
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="footer-content-page">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="website-name">
+                            CÔNG TY CỔ PHẦN JETPAY
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-9 col-lg-9 col-sm-8 col-xs-12">
+                        <div class="address-company">
+                            <div class="address">
+                                Tầng 9, tòa nhà Technosoft, phố Duy Tân, phường Dịch Vọng Hậu, Q. Cầu Giấy, TP. Hà Nội
+                            </div>
+                            <div class="contact">
+                                Giấy phép đăng ký kinh doanh số: 0108491152
+                            </div>
+                        </div>
+                        <div class="social">
+                            <div class="social-item">
+                                <a href="#">
+                                    <div class="item-content facebook">
+
+                                    </div>
+                                </a>
+
+                            </div>
+                            <div class="social-item">
+                                <a href="#">
+                                    <div class="item-content twitter">
+
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="social-item">
+                                <a href="#">
+                                    <div class="item-content instagram">
+
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="social-item">
+                                <a href="#">
+                                    <div class="item-content linkedin">
+
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="social-item">
+                                <a href="#">
+                                    <div class="item-content google">
+
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+                        <div class="map-page">
+                            <ul class="map">
+                                <li><a href="#">Về chúng tôi</a></li>
+                                <li><a href="#">Tin tức</a></li>
+                                <li><a href="#">Thỏa thuận người dùng</a></li>
+                                <li><a href="#">Quyền riêng tư</a></li>
+                                <li><a href="#">Quy định - Chính sách</a></li>
+                                <li><a href="#">Liên hệ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Trigger the modal with a button -->
+    <button style="display:none;" id="open-md" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" style="width: 90%; padding:20px;">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header" style="border-bottom: 0px solid #e5e5e5;">
+                    <div style="width:100%;height:auto; margin-top:40px;">
+                        <img width="200" height="60" style="display: block;margin-left: auto;margin-right: auto;" src="~/Content/Image/Logo_JetPay/logo-03.png" />
+                    </div>
+                </div>
+                <div class="modal-body" style="margin-bottom:60px;">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <img src="~/Content/Image/imgpsh_fullsize_anim.jpg" style="width:100%;height:auto;" />
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div style="font-size:24px;text-transform: uppercase;padding:100px;padding-left:0; font-weight:bold;">
+                                <div>Công ty cổ phần JETPAY</div>
+                                <div>Đang trong quá trình hoàn thiện</div>
+                                <div>hồ sơ xin giấy phép</div>
+                                <div>cung cấp dịch vụ trung gian thanh toán</div>
+                                <br />
+                                <div>JETPAY sẽ cung cấp dịch vụ tới quý khách hàng</div>
+                                <div>trong thời gian sớm nhất</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="~/Script/Common/jquery-1.10.2.min.js"></script>
+    <script src="~/Script/Common/bootstrap.min.js"></script>
+    @* Semantic lib *@
+    <script src="~/Css/Common/Semantic/components/accordion.min.js"></script>
+    @* End *@
+    <script src="~/Script/Common/common.js"></script>
+
+</body>
+</html>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ndbinh\\source\\repos\\JetPay_DucBinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentGateway.csproj": {}
+    "C:\\Users\\ndbinh\\Source\\Repos\\JetPay_DucBinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentGateway.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ndbinh\\source\\repos\\JetPay_DucBinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentGateway.csproj": {
+    "C:\\Users\\ndbinh\\Source\\Repos\\JetPay_DucBinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentGateway.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ndbinh\\source\\repos\\JetPay_DucBinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentGateway.csproj",
+        "projectUniqueName": "C:\\Users\\ndbinh\\Source\\Repos\\JetPay_DucBinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentGateway.csproj",
         "projectName": "MISA.JETPAY.DemoPaymentGateway",
-        "projectPath": "C:\\Users\\ndbinh\\source\\repos\\JetPay_DucBinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentGateway.csproj",
+        "projectPath": "C:\\Users\\ndbinh\\Source\\Repos\\JetPay_DucBinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentGateway.csproj",
         "packagesPath": "C:\\Users\\ndbinh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ndbinh\\source\\repos\\JetPay_DucBinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway\\obj\\",
+        "outputPath": "C:\\Users\\ndbinh\\Source\\Repos\\JetPay_DucBinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ndbinh\\AppData\\Roaming\\NuGet\\NuGet.Config",

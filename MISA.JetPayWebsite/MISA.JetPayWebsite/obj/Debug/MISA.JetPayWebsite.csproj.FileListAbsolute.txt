@@ -1,0 +1,75 @@
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\roslyn\csc.exe
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\roslyn\System.Collections.Immutable.dll
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\roslyn\System.Reflection.Metadata.dll
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\roslyn\vbc.exe
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\roslyn\VBCSCompiler.exe
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\roslyn\VBCSCompiler.exe.config
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\MISA.JetPayWebsite.dll.config
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\MISA.JetPayWebsite.dll
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\MISA.JetPayWebsite.pdb
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\Microsoft.Web.Infrastructure.dll
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\System.Web.Helpers.dll
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\System.Web.Mvc.dll
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\System.Web.Razor.dll
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\System.Web.Webpages.Deployment.dll
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\System.Web.Webpages.dll
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\System.Web.Webpages.Razor.dll
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\System.Web.Razor.xml
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\System.Web.Webpages.xml
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\System.Web.Webpages.Deployment.xml
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\System.Web.Webpages.Razor.xml
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\System.Web.Helpers.xml
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\System.Web.Mvc.xml
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\obj\Debug\MISA.JetPayWebsite.dll
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\obj\Debug\MISA.JetPayWebsite.pdb
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\Newtonsoft.Json.dll
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\Newtonsoft.Json.pdb
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\Newtonsoft.Json.xml
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\obj\Debug\MISA.JetPayWebsite.csprojAssemblyReference.cache
+D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\obj\Debug\MISA.JetPayWebsite.csproj.CopyComplete
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\roslyn\csc.exe
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\roslyn\Microsoft.CodeAnalysis.dll
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\roslyn\Microsoft.CSharp.Core.targets
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\roslyn\Microsoft.VisualBasic.Core.targets
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\roslyn\System.Collections.Immutable.dll
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\roslyn\System.Reflection.Metadata.dll
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\roslyn\vbc.exe
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\roslyn\VBCSCompiler.exe
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\roslyn\VBCSCompiler.exe.config
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\MISA.JetPayWebsite.dll.config
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\MISA.JetPayWebsite.dll
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\MISA.JetPayWebsite.pdb
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\Microsoft.Web.Infrastructure.dll
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\Newtonsoft.Json.dll
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\System.Web.Helpers.dll
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\System.Web.Mvc.dll
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\System.Web.Razor.dll
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\System.Web.Webpages.Deployment.dll
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\System.Web.Webpages.dll
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\System.Web.Webpages.Razor.dll
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\Newtonsoft.Json.pdb
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\Newtonsoft.Json.xml
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\System.Web.Razor.xml
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\System.Web.Webpages.xml
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\System.Web.Webpages.Deployment.xml
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\System.Web.Webpages.Razor.xml
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\System.Web.Helpers.xml
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\System.Web.Mvc.xml
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\obj\Debug\MISA.JetPayWebsite.csprojAssemblyReference.cache
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\obj\Debug\MISA.JetPayWebsite.csproj.CoreCompileInputs.cache
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\obj\Debug\MISA.JetPayWebsite.csproj.CopyComplete
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\obj\Debug\MISA.JetPayWebsite.dll
+\\storage\MISAMVC_TEST\JETPAY\MISA.JetPayWebsite\MISA.JetPayWebsite\obj\Debug\MISA.JetPayWebsite.pdb

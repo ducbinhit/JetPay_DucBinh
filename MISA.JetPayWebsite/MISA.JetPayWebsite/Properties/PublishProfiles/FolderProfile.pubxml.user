@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\nvthanh\Developer\MISA.PaymentGW POC\MISA.JetPayWebsite\MISA.JetPayWebsite\bin\Release\Publish</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>03/08/2019 08:08:30</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>03/08/2019 08:08:30</publishTime>
+    </File>
+    <File Include="bin/MISA.JetPayWebsite.dll">
+      <publishTime>10/23/2020 15:07:31</publishTime>
+    </File>
+    <File Include="bin/MISA.JetPayWebsite.pdb">
+      <publishTime>10/23/2020 15:07:31</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/20/2019 13:38:06</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.pdb">
+      <publishTime>03/20/2019 13:38:06</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>03/08/2019 08:08:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>03/08/2019 08:08:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>03/08/2019 08:08:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>03/08/2019 08:08:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>03/08/2019 08:08:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>03/08/2019 08:08:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>03/08/2019 08:08:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>03/08/2019 08:08:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>03/08/2019 08:08:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>03/08/2019 08:08:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>03/08/2019 08:08:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>03/08/2019 08:08:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>03/08/2019 08:08:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>03/08/2019 08:08:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>03/08/2019 08:08:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Deployment.dll">
+      <publishTime>03/08/2019 08:08:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.dll">
+      <publishTime>03/08/2019 08:08:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Razor.dll">
+      <publishTime>03/08/2019 08:08:30</publishTime>
+    </File>
+    <File Include="Content/Icon/arrowhead-pointing-to-the-right.png">
+      <publishTime>03/08/2019 09:26:04</publishTime>
+    </File>
+    <File Include="Content/Icon/bg_cover.jpg">
+      <publishTime>03/20/2019 13:37:55</publishTime>
+    </File>
+    <File Include="Content/Icon/ic_add_request.png">
+      <publishTime>03/20/2019 13:37:54</publishTime>
+    </File>
+    <File Include="Content/Icon/ic_arrow.png">
+      <publishTime>03/20/2019 13:37:54</publishTime>
+    </File>
+    <File Include="Content/Icon/ic_arrow_red.png">
+      <publishTime>03/20/2019 13:37:54</publishTime>
+    </File>
+    <File Include="Content/Icon/ic_bigoffers.png">
+      <publishTime>03/20/2019 13:37:54</publishTime>
+    </File>
+    <File Include="Content/Icon/ic_cashpickup.png">
+      <publishTime>03/20/2019 13:37:54</publishTime>
+    </File>
+    <File Include="Content/Icon/ic_check_primary.png">
+      <publishTime>03/20/2019 13:37:54</publishTime>
+    </File>
+    <File Include="Content/Icon/ic_close.png">
+      <publishTime>03/20/2019 13:37:54</publishTime>
+    </File>
+    <File Include="Content/Icon/ic_credit_card.png">
+      <publishTime>03/20/2019 13:37:54</publishTime>
+    </File>
+    <File Include="Content/Icon/ic_delete.png">
+      <publishTime>03/20/2019 13:37:55</publishTime>
+    </File>
+    <File Include="Content/Icon/ic_fail.png">
+      <publishTime>03/20/2019 13:37:55</publishTime>
+    </File>
+    <File Include="Content/Icon/ic_fail_v1.png">
+      <publishTime>03/20/2019 13:37:55</publishTime>
+    </File>
+    <File Include="Content/Icon/ic_money.png">
+      <publishTime>03/20/2019 13:37:55</publishTime>
+    </File>
+    <File Include="Content/Icon/ic_paybills.png">
+      <publishTime>03/20/2019 13:37:55</publishTime>
+    </File>
+    <File Include="Content/Icon/ic_pendding.png">
+      <publishTime>03/20/2019 13:37:55</publishTime>
+    </File>
+    <File Include="Content/Icon/ic_pos_kiosk.png">
+      <publishTime>03/20/2019 13:37:55</publishTime>
+    </File>
+    <File Include="Content/Icon/ic_qr_code.png">
+      <publishTime>03/20/2019 13:37:55</publishTime>
+    </File>
+    <File Include="Content/Icon/ic_splitbills.png">
+      <publishTime>03/20/2019 13:37:55</publishTime>
+    </File>
+    <File Include="Content/Icon/ic_success.png">
+      <publishTime>03/20/2019 13:37:55</publishTime>
+    </File>
+    <File Include="Content/Icon/ic_testing.png">
+      <publishTime>03/20/2019 13:37:55</publishTime>
+    </File>
+    <File Include="Content/Icon/ic_transfer_bank.png">
+      <publishTime>03/20/2019 13:37:55</publishTime>
+    </File>
+    <File Include="Content/Icon/ic_transfer_money.png">
+      <publishTime>03/20/2019 13:37:55</publishTime>
+    </File>
+    <File Include="Content/Icon/ic_trans_history.png">
+      <publishTime>03/20/2019 13:37:55</publishTime>
+    </File>
+    <File Include="Content/Icon/ic_wallet.png">
+      <publishTime>03/20/2019 13:37:55</publishTime>
+    </File>
+    <File Include="Content/Icon/play-arrow.svg">
+      <publishTime>03/08/2019 08:59:28</publishTime>
+    </File>
+    <File Include="Content/Image/bg-box.png">
+      <publishTime>03/08/2019 09:53:35</publishTime>
+    </File>
+    <File Include="Content/Image/bg.png">
+      <publishTime>03/08/2019 08:24:50</publishTime>
+    </File>
+    <File Include="Content/Image/bg_blockchain_banking_.jpg">
+      <publishTime>03/20/2019 13:37:56</publishTime>
+    </File>
+    <File Include="Content/Image/bg_mobile_tech.jpg">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Content/Image/bg_payments.jpg">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Content/Image/cover.png">
+      <publishTime>04/20/2019 10:32:09</publishTime>
+    </File>
+    <File Include="Content/Image/facebook.png">
+      <publishTime>04/20/2019 10:36:18</publishTime>
+    </File>
+    <File Include="Content/Image/google-plus.png">
+      <publishTime>04/20/2019 10:36:18</publishTime>
+    </File>
+    <File Include="Content/Image/imgpsh_fullsize_anim.jpg">
+      <publishTime>10/23/2020 14:14:51</publishTime>
+    </File>
+    <File Include="Content/Image/instagram.png">
+      <publishTime>04/20/2019 10:36:18</publishTime>
+    </File>
+    <File Include="Content/Image/linkedin.png">
+      <publishTime>04/20/2019 10:36:18</publishTime>
+    </File>
+    <File Include="Content/Image/Logo_JetPay/favicon.PNG">
+      <publishTime>03/08/2019 08:29:20</publishTime>
+    </File>
+    <File Include="Content/Image/Logo_JetPay/logo-03.png">
+      <publishTime>03/08/2019 08:29:16</publishTime>
+    </File>
+    <File Include="Content/Image/Logo_JetPay/logo-03.svg">
+      <publishTime>03/08/2019 08:29:16</publishTime>
+    </File>
+    <File Include="Content/Image/Logo_JetPay/logo-04.png">
+      <publishTime>03/08/2019 08:29:17</publishTime>
+    </File>
+    <File Include="Content/Image/Logo_JetPay/logo-04.svg">
+      <publishTime>03/08/2019 08:29:18</publishTime>
+    </File>
+    <File Include="Content/Image/Logo_JetPay/logo-05.png">
+      <publishTime>03/08/2019 08:29:18</publishTime>
+    </File>
+    <File Include="Content/Image/Logo_JetPay/logo-05.svg">
+      <publishTime>03/08/2019 08:29:19</publishTime>
+    </File>
+    <File Include="Content/Image/monitor.png">
+      <publishTime>03/08/2019 08:24:50</publishTime>
+    </File>
+    <File Include="Content/Image/twitter.png">
+      <publishTime>04/20/2019 10:36:18</publishTime>
+    </File>
+    <File Include="Css/Common/bootstrap.min.css">
+      <publishTime>03/08/2019 08:23:45</publishTime>
+    </File>
+    <File Include="Css/Common/custom_semantic.css">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/accordion.css">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/accordion.js">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/accordion.min.css">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/accordion.min.js">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/ad.css">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/ad.min.css">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/api.js">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/api.min.js">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/breadcrumb.css">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/breadcrumb.min.css">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/button.css">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/button.min.css">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/card.css">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/card.min.css">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/checkbox.css">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/checkbox.js">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/checkbox.min.css">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/checkbox.min.js">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/colorize.js">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/colorize.min.js">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/comment.css">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/comment.min.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/container.css">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/container.min.css">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/dimmer.css">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/dimmer.js">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/dimmer.min.css">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/dimmer.min.js">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/divider.css">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/divider.min.css">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/dropdown.css">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/dropdown.js">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/dropdown.min.css">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/dropdown.min.js">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/embed.css">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/embed.js">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/embed.min.css">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/embed.min.js">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/feed.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/feed.min.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/flag.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/flag.min.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/form.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/form.js">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/form.min.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/form.min.js">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/grid.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/grid.min.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/header.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/header.min.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/icon.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/icon.min.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/image.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/image.min.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/input.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/input.min.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/item.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/item.min.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/label.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/label.min.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/list.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/list.min.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/loader.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/loader.min.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/menu.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/menu.min.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/message.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/message.min.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/modal.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/modal.js">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/modal.min.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/modal.min.js">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/nag.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/nag.js">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/nag.min.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/nag.min.js">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/placeholder.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/placeholder.min.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/popup.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/popup.js">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/popup.min.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/popup.min.js">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/progress.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/progress.js">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/progress.min.css">
+      <publishTime>03/20/2019 13:37:59</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/progress.min.js">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/rail.css">
+      <publishTime>03/20/2019 13:37:59</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/rail.min.css">
+      <publishTime>03/20/2019 13:37:58</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/rating.css">
+      <publishTime>03/20/2019 13:37:59</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/rating.js">
+      <publishTime>03/20/2019 13:37:59</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/rating.min.css">
+      <publishTime>03/20/2019 13:37:59</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/rating.min.js">
+      <publishTime>03/20/2019 13:37:59</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/reset.css">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/reset.min.css">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/reveal.css">
+      <publishTime>03/20/2019 13:37:59</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/reveal.min.css">
+      <publishTime>03/20/2019 13:37:59</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/search.css">
+      <publishTime>03/20/2019 13:37:59</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/search.js">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/search.min.css">
+      <publishTime>03/20/2019 13:37:59</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/search.min.js">
+      <publishTime>03/20/2019 13:37:59</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/segment.css">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/segment.min.css">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/shape.css">
+      <publishTime>03/20/2019 13:37:59</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/shape.js">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/shape.min.css">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/shape.min.js">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/sidebar.css">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/sidebar.js">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/sidebar.min.css">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/sidebar.min.js">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/site.css">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/site.js">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/site.min.css">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/site.min.js">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/state.js">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/state.min.js">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/statistic.css">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/statistic.min.css">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/step.css">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/step.min.css">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/sticky.css">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/sticky.js">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/sticky.min.css">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/sticky.min.js">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/tab.css">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/tab.js">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/tab.min.css">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/tab.min.js">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/table.css">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/table.min.css">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/transition.css">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/transition.js">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/transition.min.css">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/transition.min.js">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/video.css">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/video.js">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/video.min.css">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/video.min.js">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/visibility.js">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/visibility.min.js">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/visit.js">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/components/visit.min.js">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/semantic.css">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/semantic.js">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/semantic.min.css">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/semantic.min.js">
+      <publishTime>03/20/2019 13:37:57</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/themes/default/assets/fonts/brand-icons.eot">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/themes/default/assets/fonts/brand-icons.svg">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/themes/default/assets/fonts/brand-icons.ttf">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/themes/default/assets/fonts/brand-icons.woff">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/themes/default/assets/fonts/brand-icons.woff2">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/themes/default/assets/fonts/icons.eot">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/themes/default/assets/fonts/icons.otf">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/themes/default/assets/fonts/icons.svg">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/themes/default/assets/fonts/icons.ttf">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/themes/default/assets/fonts/icons.woff">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/themes/default/assets/fonts/icons.woff2">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/themes/default/assets/fonts/outline-icons.eot">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/themes/default/assets/fonts/outline-icons.svg">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/themes/default/assets/fonts/outline-icons.ttf">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/themes/default/assets/fonts/outline-icons.woff">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/themes/default/assets/fonts/outline-icons.woff2">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/Common/Semantic/themes/default/assets/images/flags.png">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Css/home_payment.css">
+      <publishTime>04/20/2019 11:08:18</publishTime>
+    </File>
+    <File Include="Css/index.css">
+      <publishTime>04/20/2019 10:36:52</publishTime>
+    </File>
+    <File Include="Css/payment-integrate.css">
+      <publishTime>03/20/2019 13:37:56</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>03/08/2019 08:08:30</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>03/20/2019 13:37:54</publishTime>
+    </File>
+    <File Include="Script/Common/bootstrap.min.js">
+      <publishTime>03/08/2019 08:24:18</publishTime>
+    </File>
+    <File Include="Script/Common/common.js">
+      <publishTime>10/23/2020 14:49:45</publishTime>
+    </File>
+    <File Include="Script/Common/jquery-1.10.2.min.js">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Views/JetPayHome/Index.cshtml">
+      <publishTime>10/23/2020 13:48:09</publishTime>
+    </File>
+    <File Include="Views/JetPayPaymentHome/Index.cshtml">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Views/JetPayPaymentIntegrate/Overview.cshtml">
+      <publishTime>03/20/2019 13:38:00</publishTime>
+    </File>
+    <File Include="Views/web.config">
+      <publishTime>03/08/2019 08:16:22</publishTime>
+    </File>
+    <File Include="Views/_JetPayHomeLayout.cshtml">
+      <publishTime>10/23/2020 15:07:25</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>08/13/2020 09:44:26</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
