@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ndbinh\\Source\\Repos\\JetPay_DucBinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway.Merchant\\MISA.JETPAY.DemoPaymentDateway.Merchant.csproj": {}
+    "C:\\Users\\ndbinh\\source\\repos\\JetPay_DucBinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway.Merchant\\MISA.JETPAY.DemoPaymentDateway.Merchant.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ndbinh\\Source\\Repos\\JetPay_DucBinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway.Merchant\\MISA.JETPAY.DemoPaymentDateway.Merchant.csproj": {
+    "C:\\Users\\ndbinh\\source\\repos\\JetPay_DucBinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway.Merchant\\MISA.JETPAY.DemoPaymentDateway.Merchant.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ndbinh\\Source\\Repos\\JetPay_DucBinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway.Merchant\\MISA.JETPAY.DemoPaymentDateway.Merchant.csproj",
+        "projectUniqueName": "C:\\Users\\ndbinh\\source\\repos\\JetPay_DucBinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway.Merchant\\MISA.JETPAY.DemoPaymentDateway.Merchant.csproj",
         "projectName": "MISA.JETPAY.DemoPaymentDateway.Merchant",
-        "projectPath": "C:\\Users\\ndbinh\\Source\\Repos\\JetPay_DucBinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway.Merchant\\MISA.JETPAY.DemoPaymentDateway.Merchant.csproj",
+        "projectPath": "C:\\Users\\ndbinh\\source\\repos\\JetPay_DucBinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway.Merchant\\MISA.JETPAY.DemoPaymentDateway.Merchant.csproj",
         "packagesPath": "C:\\Users\\ndbinh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ndbinh\\Source\\Repos\\JetPay_DucBinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway.Merchant\\obj\\",
+        "outputPath": "C:\\Users\\ndbinh\\source\\repos\\JetPay_DucBinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway.Merchant\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ndbinh\\AppData\\Roaming\\NuGet\\NuGet.Config",

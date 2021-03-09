@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JhGcXJBfOX7DNDvNq5E0LSLbqiUxFRb/Oge1VBDJILgYG1ctgL06Qcrv7gs3WGQHi2Wy3eTZ3vQU6/jx8SD5ng==",
+  "dgSpecHash": "vflQfkfOn6RxfVDRBozOr+MAUIF0WUxZvj9XfrktPX4ssRP0U8y+8/t0nH/wgoGJ54ye1qLkgLTCSFQ7ltRbLw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ndbinh\\Source\\Repos\\JetPay_DucBinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentGateway.csproj",
+  "projectFilePath": "C:\\Users\\ndbinh\\source\\repos\\JetPay_DucBinh\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentDateway\\MISA.JETPAY.DemoPaymentGateway.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ndbinh\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\ndbinh\\.nuget\\packages\\dapper\\2.0.78\\dapper.2.0.78.nupkg.sha512",

@@ -33,6 +33,10 @@ class CheckOutJS {
 
             /* $('#dialog').hide();*/
         })
+        // hiển thị pop up điền thông tin ngân hàng quốc tế
+        $('#paymentNational').click(function () {
+            $('#payment-national').show();
+        })
         // thay  đổi ngân hàng thanh toán
         $('#ecom-paymentChange').click(function () {
             $(".payment").show();

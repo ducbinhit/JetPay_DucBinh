@@ -13,6 +13,9 @@ body {
 #payment {
     display: none;
 }
+#payment-national {
+    display:none;
+}
 .popup-modal {
    
     opacity: .5; 

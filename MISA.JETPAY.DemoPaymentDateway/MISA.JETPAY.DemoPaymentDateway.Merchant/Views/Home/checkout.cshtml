@@ -11,6 +11,7 @@
     <link href="/css/page/checkout/payment.css" rel="stylesheet" />
     <link href="/lib/icon/fontawesome-free-5.15.2-web/css/all.css" rel="stylesheet" />
     <link href="/css/page/checkout/orderSuccessful.css" rel="stylesheet" />
+    <link href="/css/page/checkout/international.css" rel="stylesheet" />
 </head>
 <body>
     <div class="container">
@@ -104,11 +105,11 @@
                                 </li>
                                 <li>
                                     <div class="option">
-                                        <input type="radio" class="custom-radio" name="paymentMethod" disabled />
+                                        <input type="radio" class="custom-radio" id="paymentNational" name="paymentMethod" />
                                     </div>
-                                    <div class="content-payment disable-item">
+                                    <div class="content-payment">
                                         <ul>
-                                            <li>Ví SenPay</li>
+                                            <li>Thanh toán bằng thẻ quốc tế Visa, Master, JCB</li>
                                             <li>
                                                 <span style="color: #828282;">Ví Senpay thanh toán nhanh hơn và nhận nhiều ưu đãi hơn</span>
                                             </li>
@@ -426,6 +427,88 @@
                     </div>
                 </div>
             </div>
+            <!--Pop up payment national-->
+            <div class="national">
+                <div id="payment-national" class="g-payment-national ReactModal__Content ReactModal__Content--after-open add-card-modal" tabindex="-1" role="dialog">
+                    <div class="styles__StyledAddCard-qlyvte-0 fbukxs">
+                        <div class="title">Thêm Thẻ Tín Dụng/ Ghi Nợ Quốc Tế</div>
+                        <div class="card-type-list">
+                            <img width="32" src="https://frontend.tikicdn.com/_desktop-next/static/img/icons/checkout/icon-payment-credit-type-tiki-card.svg" alt="tikicard" />
+                            <img width="32" src="https://frontend.tikicdn.com/_desktop-next/static/img/icons/checkout/icon-payment-credit-type-visa.svg" alt="visa" />
+                            <img width="32" src="https://frontend.tikicdn.com/_desktop-next/static/img/icons/checkout/icon-payment-credit-type-mastercard.svg" alt="mastercard" />
+                            <img width="32" src="https://frontend.tikicdn.com/_desktop-next/static/img/icons/checkout/icon-payment-credit-type-jcb.svg" alt="mastercard" />
+                        </div>
+                        <div class="add-card-form">
+                            <div class="left">
+                                <div class="styles__StyledFormItem-qlyvte-1 edOLmp">
+                                    <div class="label">Số thẻ:</div>
+                                    <input type="text" class="Input-sc-17i9bto-0 bYlDgr card-text-input__long" name="number" id="sothe" placeholder="VD: 4123 4567 8901 2345" value="" />
+                                    <div class="styles__StyledError-qlyvte-2 HtQbs"></div>
+                                </div>
+                                <div class="styles__StyledFormItem-qlyvte-1 edOLmp">
+                                    <div class="label">Tên in trên thẻ:</div>
+                                    <input type="text" class="Input-sc-17i9bto-0 bYlDgr card-text-input__long" name="name" placeholder="VD: NGUYEN VAN A" value="" />
+                                    <div class="styles__StyledError-qlyvte-2 HtQbs"></div>
+                                </div>
+                                <div class="styles__StyledFormItem-qlyvte-1 edOLmp">
+                                    <div class="label">Ngày hết hạn:</div>
+                                    <input type="text" class="Input-sc-17i9bto-0 bYlDgr card-text-input__short" name="expiry" placeholder="MM/YY" value="" />
+                                    <div class="styles__StyledError-qlyvte-2 HtQbs"></div>
+                                </div>
+                                <div class="styles__StyledFormItem-qlyvte-1 edOLmp">
+                                    <div class="label">Mã bảo mật:</div>
+                                    <div class="wrapper">
+                                        <input type="text" class="Input-sc-17i9bto-0 bYlDgr card-text-input__short" name="cvc" placeholder="VD: 123" value="" />
+                                        <img class="card-back" width="61" src="https://frontend.tikicdn.com/_desktop-next/static/img/icons/checkout/checkout-img-cvv-hint.jpg" />
+                                    </div>
+                                    <div class="styles__StyledError-qlyvte-2 HtQbs"></div>
+                                </div>
+                            </div>
+                            <div class="styles__StyledCreditCardWrapper-qlyvte-3 bFHvqm">
+                                <div class="rccs">
+                                    <div class="rccs__card rccs__card--unknown">
+                                        <div class="rccs__card--front">
+                                            <div class="rccs__card__background"></div>
+                                            <div class="rccs__issuer"></div>
+                                            <div class="rccs__cvc__front"></div>
+                                            <div class="rccs__number rccs--focused">
+                                                •••• •••• •••• ••••
+                                            </div>
+                                            <div class="rccs__name">Tên chủ thẻ</div>
+                                            <div class="rccs__expiry">
+                                                <div class="rccs__expiry__valid">
+                                                    Hiệu lực đến
+                                                </div>
+                                                <div class="rccs__expiry__value">
+                                                    ••/••
+                                                </div>
+                                            </div>
+                                            <div class="rccs__chip"></div>
+                                        </div>
+                                        <div class="rccs__card--back">
+                                            <div class="rccs__card__background"></div>
+                                            <div class="rccs__stripe"></div>
+                                            <div class="rccs__signature"></div>
+                                            <div class="rccs__cvc"></div>
+                                            <div class="rccs__issuer"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="add-card-note">
+                            Tiki không trực tiếp lưu thẻ của bạn. Để đảm bảo an toàn,
+                            thông tin thẻ của bạn chỉ được lưu bởi CyberSource, công ty
+                            quản lý thanh toán lớn nhất thế giới (thuộc tổ chức VISA)
+                        </div>
+                        <div class="button-group">
+                            <button class="back">
+                                Trở Lại
+                            </button><button class="confirm">Xác Nhận</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </main>
     </div>
@@ -433,6 +516,7 @@
     <script src="/js/common/common.js"></script>
     <script src="/js/page/checkout.js"></script>
     <script src="/js/page/payment.js"></script>
+    <script src="/js/page/international.js"></script>
 
 
 </body>
