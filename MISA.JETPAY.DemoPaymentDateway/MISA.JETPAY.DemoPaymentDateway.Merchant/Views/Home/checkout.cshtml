@@ -111,7 +111,7 @@
                                         <ul>
                                             <li>Thanh toán bằng thẻ quốc tế Visa, Master, JCB</li>
                                             <li>
-                                                <span style="color: #828282;">Ví Senpay thanh toán nhanh hơn và nhận nhiều ưu đãi hơn</span>
+                                                <span style="color: #828282;"></span>
                                             </li>
                                         </ul>
                                     </div>
@@ -429,6 +429,7 @@
             </div>
             <!--Pop up payment national-->
             <div class="national">
+                <div class="popup-modal"></div>
                 <div id="payment-national" class="g-payment-national ReactModal__Content ReactModal__Content--after-open add-card-modal" tabindex="-1" role="dialog">
                     <div class="styles__StyledAddCard-qlyvte-0 fbukxs">
                         <div class="title">Thêm Thẻ Tín Dụng/ Ghi Nợ Quốc Tế</div>
@@ -442,26 +443,26 @@
                             <div class="left">
                                 <div class="styles__StyledFormItem-qlyvte-1 edOLmp">
                                     <div class="label">Số thẻ:</div>
-                                    <input type="text" class="Input-sc-17i9bto-0 bYlDgr card-text-input__long" name="number" id="sothe" placeholder="VD: 4123 4567 8901 2345" value="" />
-                                    <div class="styles__StyledError-qlyvte-2 HtQbs"></div>
+                                    <input type="text" class="Input-sc-17i9bto-0 bYlDgr card-text-input__long" name="number" id="txtSoThe" placeholder="VD: 4123 4567 8901 2345" value="" autofocus required/>
+                                    <div class="error-message"></div>
                                 </div>
                                 <div class="styles__StyledFormItem-qlyvte-1 edOLmp">
                                     <div class="label">Tên in trên thẻ:</div>
-                                    <input type="text" class="Input-sc-17i9bto-0 bYlDgr card-text-input__long" name="name" placeholder="VD: NGUYEN VAN A" value="" />
-                                    <div class="styles__StyledError-qlyvte-2 HtQbs"></div>
+                                    <input type="text" class="Input-sc-17i9bto-0 bYlDgr card-text-input__long" name="name" placeholder="VD: NGUYEN VAN A" value="" required />
+                                    <div class="error-message"></div>
                                 </div>
                                 <div class="styles__StyledFormItem-qlyvte-1 edOLmp">
                                     <div class="label">Ngày hết hạn:</div>
-                                    <input type="text" class="Input-sc-17i9bto-0 bYlDgr card-text-input__short" name="expiry" placeholder="MM/YY" value="" />
-                                    <div class="styles__StyledError-qlyvte-2 HtQbs"></div>
+                                    <input type="text" class="Input-sc-17i9bto-0 bYlDgr card-text-input__short" name="expiry" placeholder="MM/YY" value="" required/>
+                                    <div class="error-message"></div>
                                 </div>
                                 <div class="styles__StyledFormItem-qlyvte-1 edOLmp">
                                     <div class="label">Mã bảo mật:</div>
                                     <div class="wrapper">
-                                        <input type="text" class="Input-sc-17i9bto-0 bYlDgr card-text-input__short" name="cvc" placeholder="VD: 123" value="" />
+                                        <input type="text" class="Input-sc-17i9bto-0 bYlDgr card-text-input__short" name="cvc" placeholder="VD: 123" value="" required />
                                         <img class="card-back" width="61" src="https://frontend.tikicdn.com/_desktop-next/static/img/icons/checkout/checkout-img-cvv-hint.jpg" />
                                     </div>
-                                    <div class="styles__StyledError-qlyvte-2 HtQbs"></div>
+                                    <div class="error-message"></div>
                                 </div>
                             </div>
                             <div class="styles__StyledCreditCardWrapper-qlyvte-3 bFHvqm">
@@ -502,9 +503,8 @@
                             quản lý thanh toán lớn nhất thế giới (thuộc tổ chức VISA)
                         </div>
                         <div class="button-group">
-                            <button class="back">
-                                Trở Lại
-                            </button><button class="confirm">Xác Nhận</button>
+                            <button class="back" id="btn-close-national">Trở Lại</button>
+                            <button id="g-btn-pay" class="confirm">Xác Nhận</button>
                         </div>
                     </div>
                 </div>
@@ -517,7 +517,5 @@
     <script src="/js/page/checkout.js"></script>
     <script src="/js/page/payment.js"></script>
     <script src="/js/page/international.js"></script>
-
-
 </body>
 </html>

@@ -1,14 +1,17 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+﻿
+/*Css cho các thẻ input select*/
+*:focus {
+    outline: none;
 }
-body {
-    background-color: antiquewhite;
+
+input:focus {
+    border-color: rgb(13, 92, 182);
+}
+
+select:focus {
 }
 
 .g-payment-national {
-    display: none;
     font-family: Roboto, Helvetica, Arial, sans-serif;
     position: absolute;
     top: 50%;
@@ -108,7 +111,7 @@ button, input, optgroup, select, textarea {
     margin-left: 15px;
 }
 
-.HtQbs {
+.error-message {
     color: rgb(169, 68, 66);
     font-size: 11px;
     margin-top: 5px;
@@ -463,3 +466,5 @@ button, input, optgroup, select, textarea {
 .bFHvqm .rccs__card--flipped .rccs__card--back {
     z-index: 10;
 }
+
+

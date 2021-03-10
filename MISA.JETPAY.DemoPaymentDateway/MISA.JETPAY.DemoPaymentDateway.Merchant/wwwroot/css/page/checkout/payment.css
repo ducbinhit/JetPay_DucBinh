@@ -13,12 +13,14 @@ body {
 #payment {
     display: none;
 }
-#payment-national {
+/*#payment-national {
+    display:none;
+}*/
+.national {
     display:none;
 }
 .popup-modal {
-   
-    opacity: .5; 
+    opacity: .5;
     position: fixed;
     top: 0;
     left: 0;

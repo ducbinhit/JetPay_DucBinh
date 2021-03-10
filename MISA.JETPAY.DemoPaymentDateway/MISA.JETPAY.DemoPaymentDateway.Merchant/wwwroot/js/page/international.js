@@ -1,13 +1,18 @@
-// rccs__card--front
-// rccs__card--back
-
-$(".left").on('click', 'input[name]', function () {
+/**
+ * Hàm thay đổi trạng thái của class
+ * CreateBy: BVHA (9/3/2021)
+ */
+$(".left").on('focus', 'input[name]', function () {
     var valueOfAttr = $(this).attr("name");
     var classInput = "rccs__" + valueOfAttr;
     $('.' + classInput).toggleClass('rccs--focused').siblings().removeClass('rccs--focused');
 })
 
-$(".left").on('keyup', 'input[name]', function () {
+/**
+ * Hàm sét giá trị của input sang thẻ ATM
+ * CreateBy: BVHA (9/3/2021)
+ */
+$(".left").on('keydown keyup', 'input[name]', function () {
     var valueOfAttr = $(this).attr("name");
     var defaultLengthAttr = defaultLength(valueOfAttr);
 
@@ -17,6 +22,15 @@ $(".left").on('keyup', 'input[name]', function () {
 
     var value = $(this).val().length;
     if (value <= defaultLengthAttr) {
+        if (valueOfAttr === 'number') {
+            console.log($(this).val());
+            if (value == 4 || value == 9 || value == 14) {
+                $(this).val($(this).val() + ' ');
+            } else {
+                $('.' + classInput + '__value').text($(this).val());
+            }
+        }
+
         if (valueOfAttr === 'expiry') {
             if (value == 2) {
                 $(this).val($(this).val() + '/');
@@ -29,10 +43,18 @@ $(".left").on('keyup', 'input[name]', function () {
     }
 })
 
+/**
+ * Hàm thêm class vào input có name=cvc
+ * CreateBy: BVHA (9/3/2021)
+ */
 $("input[name='cvc']").click(function () {
     $('.rccs__card').addClass('rccs__card--flipped');
 })
 
+/**
+ * Hàm xóa class những input không có name=cvc
+ * CreateBy: BVHA (9/3/2021)
+ */
 $("input[name!='cvc']").click(function () {
     $('.rccs__card').removeClass('rccs__card--flipped');
 })
@@ -47,7 +69,7 @@ function defaultLength(nameAttr) {
     let value;
     switch (nameAttr) {
         case 'number':
-            value = 16;
+            value = 19;
             break;
         case 'name':
             value = 25;

@@ -62,3 +62,6 @@ a {
     font-family: 'GoogleSans-Regular';
     src: url('/content/font/GoogleSans-Regular.otf') format('opentype');
 }
+input.border-red {
+    border: 1px solid red;
+}
