@@ -35,15 +35,22 @@ class CheckOutJS {
         })
         // sự kiện click đóng popup thanh toán qua thẻ quốc tế
         $('#btn-close-national').click(function () {
+            $('input[name]').val("");
+            $('input[name]').removeClass("border-red");
             $('.national').css("display", "none");
         })
         // hiển thị ngân hàng được chọn
-        $('#ecom-payment').click(function () {
+        $('#ecom-payment, .payment-local').click(function () {
             $(".payment").show();
             /* $('#dialog').hide();*/
         })
+        // select khi chon cac phuong thuc thanh toan
+        $(".panel-content ul li").on('click', '.content-payment', function () {
+            $(this).siblings('div').find('input:radio').prop('checked', true);
+        })
         // hiển thị pop up điền thông tin ngân hàng quốc tế
-        $('#paymentNational').click(function () {
+        $('#paymentNational, .payment-national').click(function () {
+            
             $('.national').show();
             $('#txtSoThe').focus();
         })
