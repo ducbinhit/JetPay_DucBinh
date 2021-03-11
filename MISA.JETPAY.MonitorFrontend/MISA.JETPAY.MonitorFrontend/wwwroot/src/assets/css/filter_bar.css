@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 16px;
+}
+
+
+/* Left side */
+
+.container .left-side {
+    display: flex;
+    flex-grow: 8;
+}
+
+.container .left-side>div {
+    margin-right: 16px;
+}
+
+.container .left-side .txt-seach {
+    width: 450px;
+}
+
+.container .left-side .date-filter {
+    display: flex;
+}
+
+.container .left-side .date-filter>div {
+    margin-right: 5px;
+}
+
+.container .left-side .date-filter .block .inputDate {
+    width: 200px;
+}
+
+
+/* Right side */
+
+.container .right-side {
+    display: flex;
+    flex-grow: 2;
+    justify-content: flex-end;
+}

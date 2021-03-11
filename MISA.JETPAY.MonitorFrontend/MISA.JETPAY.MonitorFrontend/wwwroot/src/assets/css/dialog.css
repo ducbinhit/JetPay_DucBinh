@@ -1,0 +1,61 @@
+.m-dialog table {
+    height: 100%;
+}
+
+.el-dialog__header {
+    padding: 24px 24px 0 24px;
+}
+
+.el-dialog__title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.el-dialog__body {
+    padding: 24px;
+    height: 100%;
+    font-size: 13px;
+    color: #000000;
+}
+
+.el-tabs__item {
+    font-size: 15px;
+}
+
+.el-dialog__footer {
+    padding: 10px 24px 10px 24px;
+}
+
+.el-dialog__footer button {
+    justify-content: center;
+    display: inline-block;
+    margin-left: 16px;
+}
+
+.el-row {
+    margin-bottom: 16px;
+}
+
+.el-row:last-child {
+    margin-bottom: 0;
+}
+
+.hiddeninput {
+    width: 0px !important;
+    position: absolute !important;
+    height: 0px !important;
+    border: hidden !important;
+    outline: unset;
+}
+
+.hiddeninput:focus {
+    border: hidden !important;
+}
+
+.span-required {
+    color: #ff0000;
+}
+
+.notify h2 {
+    line-height: 27px;
+}

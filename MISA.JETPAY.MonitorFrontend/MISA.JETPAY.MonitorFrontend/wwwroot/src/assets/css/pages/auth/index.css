@@ -1,0 +1,23 @@
+.main-login .container .wraper .middle-content {
+    background-color: #fff;
+    border: none !important;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    border-radius: 10px;
+    padding: 20px;
+    height: 350px;
+  }
+  .main-login .container .wraper .middle-content .text-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .main-login .container .wraper .middle-content > div {
+    margin-top: 24px;
+  }
+  .main-login .container .wraper .middle-content > button {
+    margin-bottom: 24px;
+    margin-top: 24px;
+  }
+  .main-login .container .wraper .middle-content a{
+    text-decoration: none;
+    color: #409EFF;
+  }

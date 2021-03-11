@@ -1,0 +1,95 @@
+.pagination {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    color: #454545;
+}
+
+.pagination .info-limit {
+    width: 200px;
+}
+
+.pagination .info-page {
+    width: 200px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pagination .page {
+    width: calc(100% - 400px);
+    display: flex;
+    justify-content: center;
+}
+
+.page ul {
+    display: flex;
+    list-style-type: none;
+    grid-gap: 16px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+}
+
+.page ul li {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: #fff;
+}
+
+
+/* .page ul li:focus{
+      background-color: #f5f7fa;
+  } */
+
+.page ul li i {
+    font-size: 16px;
+}
+
+.page ul .page-number {
+    border: 1px solid #bbbbbb;
+    border-radius: 50%;
+}
+
+.page ul .page-number:hover {
+    background-color: #ecf5ff;
+    border-color: #c6e2ff;
+    color: #409eff;
+}
+
+.page ul .page-number.active {
+    background-color: #1989fa;
+    color: #ffffff;
+}
+
+.page ul .page-number.active:hover {
+    background-color: #419fff;
+    color: #ffffff;
+}
+
+.page ul .page-control {
+    border: 1px solid #ccc;
+    border-color: transparent;
+    line-height: 42px;
+    border-radius: 20%;
+}
+
+.page ul .page-control:hover {
+    background-color: #ecf5ff;
+    border-color: #c6e2ff;
+    color: #409eff;
+}
+
+
+/* Custom element ui */
+
+.info-page>div {
+    width: 160px;
+}
+
+
+/* End custom element ui */

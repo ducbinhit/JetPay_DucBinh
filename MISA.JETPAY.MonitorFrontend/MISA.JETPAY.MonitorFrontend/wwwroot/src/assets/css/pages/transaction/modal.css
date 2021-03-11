@@ -1,0 +1,66 @@
+/* Css lại */
+
+.dialog-transaction-infor .dialog-content {
+    display: flex;
+    width: 100%;
+}
+
+.dialog-transaction-infor .dialog-content>div {
+    width: 500px;
+}
+
+.dialog-transaction-infor .dialog-content>div:first-child {
+    margin-right: 24px;
+}
+
+.dialog-transaction-infor .dialog-content>div p {
+    width: 100%;
+    font-weight: bold;
+    font-size: 17px;
+    margin-top: 0px;
+    margin-bottom: 16px;
+}
+
+.dialog-transaction-infor .dialog-content .left-side>div {
+    padding: 8px 0px;
+}
+
+.dialog-transaction-infor .dialog-content .right-side>div:first-child {
+    margin-bottom: 50px;
+}
+
+.dialog-transaction-infor .dialog-content .right-side>div>div {
+    padding: 8px 0px;
+}
+
+.dialog-transaction-infor .dialog-content .title {
+    width: 120px;
+    display: inline-block;
+    font-size: 15px;
+    vertical-align: top;
+}
+
+.dialog-transaction-infor .dialog-content .content {
+    width: 300px;
+    display: inline-block;
+    font-size: 15px;
+    vertical-align: top;
+    word-break: break-word;
+    font-weight: bold;
+}
+
+.dialog-transaction-infor .dialog-footer .el-button {
+    padding: 0px 24px !important;
+    height: 40px;
+    width: 100px;
+}
+
+.title-content {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.title-content span {
+    border-bottom: 3px solid red;
+    padding-bottom: 3px;
+}

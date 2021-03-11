@@ -1,0 +1,5 @@
+.grid {
+    width: 100%;
+    height: calc(100% - 168px);
+    margin-bottom: 16px;
+}

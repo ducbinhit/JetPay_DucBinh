@@ -1,0 +1,75 @@
+.grid {
+    overflow-x: auto;
+    background-color: #fff;
+}
+
+table {
+    width: 120%;
+    height: 100%;
+    color: #454545;
+    border-bottom: 1px solid #bbbbbb;
+}
+
+table th,
+td {
+    border-bottom: 1px solid #bbbbbb;
+    padding: 10px 16px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+table tbody tr:hover {
+    background-color: #dfeeff;
+}
+
+.grid table tbody,
+.el-dialog__wrapper table tbody {
+    display: block;
+    overflow-y: auto;
+    height: calc(100% - 39px);
+}
+
+thead,
+tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+
+/* width */
+
+::-webkit-scrollbar,
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

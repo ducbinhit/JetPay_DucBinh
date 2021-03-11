@@ -1,0 +1,31 @@
+.user-infor {
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    align-items: center;
+}
+
+.user-infor .user-avatar {
+    background-size: contain;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+.user-infor .user-name {
+    line-height: 25px;
+    margin-right: 16px;
+}
+
+.user-infor .user-more::before {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.user-infor .user-more {
+    margin-right: 16px;
+}

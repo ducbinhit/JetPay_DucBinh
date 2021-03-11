@@ -1,0 +1,130 @@
+.m-btn {
+    display: flex;
+    outline: none;
+    border: none;
+    align-items: center;
+    border-radius: 4px;
+    height: 40px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 13px;
+    cursor: pointer;
+    grid-gap: 8px;
+    transition: all .2s ease;
+}
+
+.m-btn i {
+    font-size: 16px;
+}
+
+.m-btn-text-2 {
+    width: 100px;
+}
+
+.m-btn-icon {
+    width: 40px;
+    padding: 0;
+    background-color: #fff;
+    border: 1px solid #E5E5E5;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.btn-add:hover {
+    background-color: #419fff;
+}
+
+.btn-add {
+    background-color: #1989FA;
+    color: #ffffff;
+    font-size: 13px;
+    border-color: #1989FA;
+}
+
+.m-btn-danger {
+    background-color: #f56c6c;
+    color: #ffffff;
+    font-size: 13px;
+    border-color: #f56c6c;
+}
+
+.m-btn-danger:hover,
+.m-btn-danger:focus {
+    background-color: #f78989;
+    border-color: #f78989;
+}
+
+.btn-add:focus,
+.btn-add:hover {
+    background: #66b1ff;
+    border-color: #66b1ff;
+    color: #fff;
+}
+
+.m-btn-default {
+    border: 1px solid #bbbbbb;
+    background-color: #fff;
+    color: #000000;
+}
+
+
+/* .m-btn-default:hover {
+    background-color: #e5e5e5;
+} */
+
+.m-btn-default:focus,
+.m-btn-default:hover {
+    color: #409EFF;
+    border-color: #c6e2ff;
+    background-color: #ecf5ff;
+}
+
+.m-icon {
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.m-btn-cancel {
+    background-color: #fff;
+    color: #000000;
+}
+
+.m-btn-cancel:hover,
+.m-btn-cancel:focus {
+    background-color: #e9ebee;
+}
+
+.icon-add-bank {
+    background-image: url('./../images/add-bank.png');
+    filter: invert(1);
+}
+
+.icon-export {
+    background-image: url('./../images/export.png');
+}
+
+.icon-refresh {
+    background-image: url('./../images/refresh.png');
+}
+
+.icon-warning {
+    background-image: url('./../images/warning.png');
+}
+
+.m-i-8 {
+    margin-right: 8px;
+}
+
+.el-range__icon {
+    font-size: 16px !important;
+    margin-left: 0px !important;
+}
