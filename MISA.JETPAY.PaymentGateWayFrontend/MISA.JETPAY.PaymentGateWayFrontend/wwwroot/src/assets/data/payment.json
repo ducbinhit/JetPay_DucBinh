@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "image": "https://media3.scdn.vn/img3/bank/acb.jpg",
+        "name": "ACB"
+    },
+    {
+        "id": 2,
+        "image": "https://media3.scdn.vn/img3/bank/agribank.jpg",
+        "name": "Agribank"
+    },
+    {
+        "id": 3,
+        "image": "https://media3.scdn.vn/img3/bank/anbinhbank.jpg",
+        "name": "AnBinhBank"
+    },
+    {
+        "id": 4,
+        "image": "https://media3.scdn.vn/img3/bank/bidv.jpg",
+        "name": "BIDV"
+    },
+    {
+        "id": 5,
+        "image": "https://media3.scdn.vn/img3/bank/bacabank.jpg",
+        "name": "Bac A Bank"
+    },
+    {
+        "id": 6,
+        "image": "https://media3.scdn.vn/img3/bank/baovietbank.jpg",
+        "name": "BaoVietBank"
+    }
+]
