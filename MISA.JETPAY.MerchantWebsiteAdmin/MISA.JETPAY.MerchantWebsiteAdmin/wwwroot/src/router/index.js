@@ -39,6 +39,40 @@ const routes = [
         /* webpackChunkName: "about" */ "../views/MangementTransaction.vue"
       ),
   },
+  {
+    path: "/management-ttransaction1",
+    name: "ManagementTransaction1",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(
+        /* webpackChunkName: "about" */ "../views/MangementTransaction1.vue"
+      ),
+  },
+  {
+    path: "/slidebar",
+    name: "Slidebar",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(
+        /* webpackChunkName: "about" */ "../components/SlideBar.vue"
+      ),
+  },
+  {
+    path: "/header",
+    name: "Header",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(
+        /* webpackChunkName: "about" */ "../components/Header.vue"
+      )
+  }
+  
 ];
 
 const router = new VueRouter({

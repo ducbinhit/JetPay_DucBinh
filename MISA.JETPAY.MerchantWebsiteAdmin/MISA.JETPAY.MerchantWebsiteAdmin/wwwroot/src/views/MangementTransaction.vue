@@ -1,1312 +1,1324 @@
 <template>
   <div class="main">
-    <div class="transaction-details">
-      <div class="title">Quản lý giao dịch thanh toán</div>
-      <div class="line"></div>
-      <!-- transaction content -->
-      <div class="transaction-content">
-        <!-- btn group -->
-        <div class="btn-group">
-          <button
-            type="button"
-            class="dropdown-toggle select-office"
-            data-toggle="dropdown"
-            aria-expanded="false"
-            id="button-search-department"
-          >
-            Tháng này
-            <i class="fas fa-caret-down"></i>
-          </button>
-          <div class="dropdown-menu" id="data-department"></div>
-        </div>
-        <!-- and btn group -->
-        <!-- group money -->
-        <div class="group-money">
-          <div class="money-left">
-            <div class="m-col">
-              <div class="m-icon">Σ</div>
-              <div class="m-text">Tiền hàng:</div>
-              <div class="m-money">100.000.000</div>
+    <SlideBar />
+    <div class="main-right">
+      <Header />
+      <div class="transaction-details">
+        <div class="title">Quản lý giao dịch thanh toán</div>
+        <div class="line"></div>
+        <!-- transaction content -->
+        <div class="transaction-content">
+          <!-- btn group -->
+          <div class="btn-group">
+            <button
+              type="button"
+              class="dropdown-toggle select-office"
+              data-toggle="dropdown"
+              aria-expanded="false"
+              id="button-search-department"
+            >
+              Tháng này
+              <i class="fas fa-caret-down"></i>
+            </button>
+            <div class="dropdown-menu" id="data-department"></div>
+          </div>
+          <!-- and btn group -->
+          <!-- group money -->
+          <div class="group-money">
+            <div class="money-left">
+              <div class="m-col">
+                <div class="m-icon">Σ</div>
+                <div class="m-text">Tiền hàng:</div>
+                <div class="m-money">100.000.000</div>
+              </div>
+              <div class="m-col">
+                <div class="m-icon">Σ</div>
+                <div class="m-text">Giảm giá:</div>
+                <div class="m-money">100.000.000</div>
+              </div>
+              <div class="m-col">
+                <div class="m-icon">Σ</div>
+                <div class="m-text">Phí giao dịch:</div>
+                <div class="m-money">100.000.000</div>
+              </div>
+              <div class="m-col">
+                <div class="m-icon">Σ</div>
+                <div class="m-text">Tiền thanh toán:</div>
+                <div class="m-money">100.000.000</div>
+              </div>
             </div>
-            <div class="m-col">
-              <div class="m-icon">Σ</div>
-              <div class="m-text">Giảm giá:</div>
-              <div class="m-money">100.000.000</div>
-            </div>
-            <div class="m-col">
-              <div class="m-icon">Σ</div>
-              <div class="m-text">Phí giao dịch:</div>
-              <div class="m-money">100.000.000</div>
-            </div>
-            <div class="m-col">
-              <div class="m-icon">Σ</div>
-              <div class="m-text">Tiền thanh toán:</div>
-              <div class="m-money">100.000.000</div>
+            <div class="money-right">
+              <div class="m-col m-col1">
+                <div class="m-text">Đơn vị:</div>
+                <div class="m-money">VNĐ</div>
+              </div>
             </div>
           </div>
-          <div class="money-right">
-            <div class="m-col m-col1">
-              <div class="m-text">Đơn vị:</div>
-              <div class="m-money">VNĐ</div>
-            </div>
-          </div>
+          <!-- end group money -->
         </div>
-        <!-- end group money -->
+        <!-- data table -->
+        <div class="data-table">
+          <div class="loader"></div>
+          <table class="table">
+            <colgroup>
+              <col width="" />
+              <col width="" />
+              <col width="" />
+              <col width="" />
+              <col width="" />
+              <col width="" />
+              <col width="" />
+              <col width="" />
+              <col width="" />
+              <col width="" />
+              <col width="" />
+              <col width="" />
+              <col width="" />
+              <col width="" />
+              <col width="" />
+              <col width="" />
+              <col width="" />
+              <col width="" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th width="50px" fieldName="">STT</th>
+                <th width="150px" fieldName="">Ngày thanh toán</th>
+                <th width="150px" fieldName="">Ngày đơn hàng</th>
+                <th width="150px" fieldName="">Mã giao dịch</th>
+                <th width="150px" fieldName="">Mã đơn hàng</th>
+                <th width="200px" fieldName="">Tên khách hàng</th>
+                <th width="120px" fieldName="">Số điện thoại</th>
+                <th width="300px" fieldName="">Email</th>
+                <th width="200px" fieldName="">Địa chỉ</th>
+                <th width="100px" fieldName="">Loại thẻ</th>
+                <th width="200px" fieldName="">Chủ thẻ</th>
+                <th width="150" fieldName="">Loại tiền</th>
+                <th width="150" fieldName="">Tiền hàng</th>
+                <th width="150" fieldName="">Giảm giá</th>
+                <th width="200px" fieldName="">Phí giao dịch</th>
+                <th width="150" fieldName="">Tổng tiền</th>
+                <th width="150" fieldName="">Trạng thái</th>
+                <th width="150" fieldName="">Setting</th>
+              </tr>
+            </thead>
+            <tbody id="render-data">
+              <tr class="filter-data">
+                <td>
+                  <input style="width: 35px" type="text" />
+                </td>
+                <td>
+                  <input type="text" />
+                </td>
+                <td>
+                  <input type="text" />
+                </td>
+                <td>
+                  <input type="text" />
+                </td>
+                <td>
+                  <input type="text" />
+                </td>
+                <td>
+                  <input type="text" />
+                </td>
+                <td>
+                  <input type="text" />
+                </td>
+                <td>
+                  <input style="width: 200px" type="text" />
+                </td>
+                <td>
+                  <input type="text" />
+                </td>
+                <td>
+                  <input type="text" />
+                </td>
+                <td>
+                  <input type="text" />
+                </td>
+                <td>
+                  <input type="text" />
+                </td>
+                <td>
+                  <input type="text" />
+                </td>
+                <td>
+                  <input type="text" />
+                </td>
+                <td>
+                  <input type="text" />
+                </td>
+                <td>
+                  <input type="text" />
+                </td>
+                <td>
+                  <input type="text" />
+                </td>
+                <td>
+                  <input type="text" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span>01</span>
+                </td>
+                <td>
+                  <span>18/03/2021</span>
+                </td>
+                <td>
+                  <span>20/03/2021</span>
+                </td>
+                <td>
+                  <span>123456</span>
+                </td>
+                <td>
+                  <span>654321</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>0366666666</span>
+                </td>
+                <td>
+                  <span>ndbinh@gmail.com</span>
+                </td>
+                <td>
+                  <span>Sóc Sơn, Hà Nội</span>
+                </td>
+                <td>
+                  <span>VISA</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>1234 4321 4567 6543</span>
+                </td>
+                <td>
+                  <span>VNĐ</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>Đang xử lý</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span>01</span>
+                </td>
+                <td>
+                  <span>18/03/2021</span>
+                </td>
+                <td>
+                  <span>20/03/2021</span>
+                </td>
+                <td>
+                  <span>123456</span>
+                </td>
+                <td>
+                  <span>654321</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>0366666666</span>
+                </td>
+                <td>
+                  <span>ndbinh@gmail.com</span>
+                </td>
+                <td>
+                  <span>Sóc Sơn, Hà Nội</span>
+                </td>
+                <td>
+                  <span>VISA</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>1234 4321 4567 6543</span>
+                </td>
+                <td>
+                  <span>VNĐ</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>Đang xử lý</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span>01</span>
+                </td>
+                <td>
+                  <span>18/03/2021</span>
+                </td>
+                <td>
+                  <span>20/03/2021</span>
+                </td>
+                <td>
+                  <span>123456</span>
+                </td>
+                <td>
+                  <span>654321</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>0366666666</span>
+                </td>
+                <td>
+                  <span>ndbinh@gmail.com</span>
+                </td>
+                <td>
+                  <span>Sóc Sơn, Hà Nội</span>
+                </td>
+                <td>
+                  <span>VISA</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>1234 4321 4567 6543</span>
+                </td>
+                <td>
+                  <span>VNĐ</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>Đang xử lý</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span>01</span>
+                </td>
+                <td>
+                  <span>18/03/2021</span>
+                </td>
+                <td>
+                  <span>20/03/2021</span>
+                </td>
+                <td>
+                  <span>123456</span>
+                </td>
+                <td>
+                  <span>654321</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>0366666666</span>
+                </td>
+                <td>
+                  <span>ndbinh@gmail.com</span>
+                </td>
+                <td>
+                  <span>Sóc Sơn, Hà Nội</span>
+                </td>
+                <td>
+                  <span>VISA</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>1234 4321 4567 6543</span>
+                </td>
+                <td>
+                  <span>VNĐ</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>Đang xử lý</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span>01</span>
+                </td>
+                <td>
+                  <span>18/03/2021</span>
+                </td>
+                <td>
+                  <span>20/03/2021</span>
+                </td>
+                <td>
+                  <span>123456</span>
+                </td>
+                <td>
+                  <span>654321</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>0366666666</span>
+                </td>
+                <td>
+                  <span>ndbinh@gmail.com</span>
+                </td>
+                <td>
+                  <span>Sóc Sơn, Hà Nội</span>
+                </td>
+                <td>
+                  <span>VISA</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>1234 4321 4567 6543</span>
+                </td>
+                <td>
+                  <span>VNĐ</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>Đang xử lý</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span>01</span>
+                </td>
+                <td>
+                  <span>18/03/2021</span>
+                </td>
+                <td>
+                  <span>20/03/2021</span>
+                </td>
+                <td>
+                  <span>123456</span>
+                </td>
+                <td>
+                  <span>654321</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>0366666666</span>
+                </td>
+                <td>
+                  <span>ndbinh@gmail.com</span>
+                </td>
+                <td>
+                  <span>Sóc Sơn, Hà Nội</span>
+                </td>
+                <td>
+                  <span>VISA</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>1234 4321 4567 6543</span>
+                </td>
+                <td>
+                  <span>VNĐ</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>Đang xử lý</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span>01</span>
+                </td>
+                <td>
+                  <span>18/03/2021</span>
+                </td>
+                <td>
+                  <span>20/03/2021</span>
+                </td>
+                <td>
+                  <span>123456</span>
+                </td>
+                <td>
+                  <span>654321</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>0366666666</span>
+                </td>
+                <td>
+                  <span>ndbinh@gmail.com</span>
+                </td>
+                <td>
+                  <span>Sóc Sơn, Hà Nội</span>
+                </td>
+                <td>
+                  <span>VISA</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>1234 4321 4567 6543</span>
+                </td>
+                <td>
+                  <span>VNĐ</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>Đang xử lý</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span>01</span>
+                </td>
+                <td>
+                  <span>18/03/2021</span>
+                </td>
+                <td>
+                  <span>20/03/2021</span>
+                </td>
+                <td>
+                  <span>123456</span>
+                </td>
+                <td>
+                  <span>654321</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>0366666666</span>
+                </td>
+                <td>
+                  <span>ndbinh@gmail.com</span>
+                </td>
+                <td>
+                  <span>Sóc Sơn, Hà Nội</span>
+                </td>
+                <td>
+                  <span>VISA</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>1234 4321 4567 6543</span>
+                </td>
+                <td>
+                  <span>VNĐ</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>Đang xử lý</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span>01</span>
+                </td>
+                <td>
+                  <span>18/03/2021</span>
+                </td>
+                <td>
+                  <span>20/03/2021</span>
+                </td>
+                <td>
+                  <span>123456</span>
+                </td>
+                <td>
+                  <span>654321</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>0366666666</span>
+                </td>
+                <td>
+                  <span>ndbinh@gmail.com</span>
+                </td>
+                <td>
+                  <span>Sóc Sơn, Hà Nội</span>
+                </td>
+                <td>
+                  <span>VISA</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>1234 4321 4567 6543</span>
+                </td>
+                <td>
+                  <span>VNĐ</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>Đang xử lý</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span>01</span>
+                </td>
+                <td>
+                  <span>18/03/2021</span>
+                </td>
+                <td>
+                  <span>20/03/2021</span>
+                </td>
+                <td>
+                  <span>123456</span>
+                </td>
+                <td>
+                  <span>654321</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>0366666666</span>
+                </td>
+                <td>
+                  <span>ndbinh@gmail.com</span>
+                </td>
+                <td>
+                  <span>Sóc Sơn, Hà Nội</span>
+                </td>
+                <td>
+                  <span>VISA</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>1234 4321 4567 6543</span>
+                </td>
+                <td>
+                  <span>VNĐ</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>Đang xử lý</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span>01</span>
+                </td>
+                <td>
+                  <span>18/03/2021</span>
+                </td>
+                <td>
+                  <span>20/03/2021</span>
+                </td>
+                <td>
+                  <span>123456</span>
+                </td>
+                <td>
+                  <span>654321</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>0366666666</span>
+                </td>
+                <td>
+                  <span>ndbinh@gmail.com</span>
+                </td>
+                <td>
+                  <span>Sóc Sơn, Hà Nội</span>
+                </td>
+                <td>
+                  <span>VISA</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>1234 4321 4567 6543</span>
+                </td>
+                <td>
+                  <span>VNĐ</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>Đang xử lý</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span>01</span>
+                </td>
+                <td>
+                  <span>18/03/2021</span>
+                </td>
+                <td>
+                  <span>20/03/2021</span>
+                </td>
+                <td>
+                  <span>123456</span>
+                </td>
+                <td>
+                  <span>654321</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>0366666666</span>
+                </td>
+                <td>
+                  <span>ndbinh@gmail.com</span>
+                </td>
+                <td>
+                  <span>Sóc Sơn, Hà Nội</span>
+                </td>
+                <td>
+                  <span>VISA</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>1234 4321 4567 6543</span>
+                </td>
+                <td>
+                  <span>VNĐ</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>Đang xử lý</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span>01</span>
+                </td>
+                <td>
+                  <span>18/03/2021</span>
+                </td>
+                <td>
+                  <span>20/03/2021</span>
+                </td>
+                <td>
+                  <span>123456</span>
+                </td>
+                <td>
+                  <span>654321</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>0366666666</span>
+                </td>
+                <td>
+                  <span>ndbinh@gmail.com</span>
+                </td>
+                <td>
+                  <span>Sóc Sơn, Hà Nội</span>
+                </td>
+                <td>
+                  <span>VISA</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>1234 4321 4567 6543</span>
+                </td>
+                <td>
+                  <span>VNĐ</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>Đang xử lý</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span>01</span>
+                </td>
+                <td>
+                  <span>18/03/2021</span>
+                </td>
+                <td>
+                  <span>20/03/2021</span>
+                </td>
+                <td>
+                  <span>123456</span>
+                </td>
+                <td>
+                  <span>654321</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>0366666666</span>
+                </td>
+                <td>
+                  <span>ndbinh@gmail.com</span>
+                </td>
+                <td>
+                  <span>Sóc Sơn, Hà Nội</span>
+                </td>
+                <td>
+                  <span>VISA</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>1234 4321 4567 6543</span>
+                </td>
+                <td>
+                  <span>VNĐ</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>Đang xử lý</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span>01</span>
+                </td>
+                <td>
+                  <span>18/03/2021</span>
+                </td>
+                <td>
+                  <span>20/03/2021</span>
+                </td>
+                <td>
+                  <span>123456</span>
+                </td>
+                <td>
+                  <span>654321</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>0366666666</span>
+                </td>
+                <td>
+                  <span>ndbinh@gmail.com</span>
+                </td>
+                <td>
+                  <span>Sóc Sơn, Hà Nội</span>
+                </td>
+                <td>
+                  <span>VISA</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>1234 4321 4567 6543</span>
+                </td>
+                <td>
+                  <span>VNĐ</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>Đang xử lý</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span>01</span>
+                </td>
+                <td>
+                  <span>18/03/2021</span>
+                </td>
+                <td>
+                  <span>20/03/2021</span>
+                </td>
+                <td>
+                  <span>123456</span>
+                </td>
+                <td>
+                  <span>654321</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>0366666666</span>
+                </td>
+                <td>
+                  <span>ndbinh@gmail.com</span>
+                </td>
+                <td>
+                  <span>Sóc Sơn, Hà Nội</span>
+                </td>
+                <td>
+                  <span>VISA</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>1234 4321 4567 6543</span>
+                </td>
+                <td>
+                  <span>VNĐ</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>Đang xử lýyyy</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span>01</span>
+                </td>
+                <td>
+                  <span>18/03/2021</span>
+                </td>
+                <td>
+                  <span>20/03/2021</span>
+                </td>
+                <td>
+                  <span>123456</span>
+                </td>
+                <td>
+                  <span>654321</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>0366666666</span>
+                </td>
+                <td>
+                  <span>ndbinh@gmail.com</span>
+                </td>
+                <td>
+                  <span>Sóc Sơn, Hà Nội</span>
+                </td>
+                <td>
+                  <span>VISA</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>1234 4321 4567 6543</span>
+                </td>
+                <td>
+                  <span>VNĐ</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>Đang xử lýyyy</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span>01</span>
+                </td>
+                <td>
+                  <span>18/03/2021</span>
+                </td>
+                <td>
+                  <span>20/03/2021</span>
+                </td>
+                <td>
+                  <span>123456</span>
+                </td>
+                <td>
+                  <span>654321</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>0366666666</span>
+                </td>
+                <td>
+                  <span>ndbinh@gmail.com</span>
+                </td>
+                <td>
+                  <span>Sóc Sơn, Hà Nội</span>
+                </td>
+                <td>
+                  <span>VISA</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>1234 4321 4567 6543</span>
+                </td>
+                <td>
+                  <span>VNĐ</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>Đang xử lýyyy</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span>01</span>
+                </td>
+                <td>
+                  <span>18/03/2021</span>
+                </td>
+                <td>
+                  <span>20/03/2021</span>
+                </td>
+                <td>
+                  <span>123456</span>
+                </td>
+                <td>
+                  <span>654321</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>0366666666</span>
+                </td>
+                <td>
+                  <span>ndbinh@gmail.com</span>
+                </td>
+                <td>
+                  <span>Sóc Sơn, Hà Nội</span>
+                </td>
+                <td>
+                  <span>VISA</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>1234 4321 4567 6543</span>
+                </td>
+                <td>
+                  <span>VNĐ</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>Đang xử lýyyy</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span>01</span>
+                </td>
+                <td>
+                  <span>18/03/2021</span>
+                </td>
+                <td>
+                  <span>20/03/2021</span>
+                </td>
+                <td>
+                  <span>123456</span>
+                </td>
+                <td>
+                  <span>654321</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>0366666666</span>
+                </td>
+                <td>
+                  <span>ndbinh@gmail.com</span>
+                </td>
+                <td>
+                  <span>Sóc Sơn, Hà Nội</span>
+                </td>
+                <td>
+                  <span>VISA</span>
+                </td>
+                <td>
+                  <span>Nguyễn Đức Bình</span>
+                </td>
+                <td>
+                  <span>1234 4321 4567 6543</span>
+                </td>
+                <td>
+                  <span>VNĐ</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>100.000.000</span>
+                </td>
+                <td>
+                  <span>Đang xử lýyyy</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- end data table -->
+        <div class="paging-bar">
+          <div class="paging-left">Hiển thị 1-10/120 Khách hàng</div>
+        </div>
+        <!-- end transaction content -->
       </div>
-      <!-- data table -->
-      <div class="data-table">
-        <div class="loader"></div>
-        <table class="table">
-          <colgroup>
-            <col width="" />
-            <col width="" />
-            <col width="" />
-            <col width="" />
-            <col width="" />
-            <col width="" />
-            <col width="" />
-            <col width="" />
-            <col width="" />
-            <col width="" />
-            <col width="" />
-            <col width="" />
-            <col width="" />
-            <col width="" />
-            <col width="" />
-            <col width="" />
-            <col width="" />
-            <col width="" />
-          </colgroup>
-          <thead>
-            <tr>
-              <th width="50px" fieldName="">STT</th>
-              <th width="150px" fieldName="">Ngày thanh toán</th>
-              <th width="150px" fieldName="">Ngày đơn hàng</th>
-              <th width="150px" fieldName="">Mã giao dịch</th>
-              <th width="150px" fieldName="">Mã đơn hàng</th>
-              <th width="200px" fieldName="">Tên khách hàng</th>
-              <th width="120px" fieldName="">Số điện thoại</th>
-              <th width="300px" fieldName="">Email</th>
-              <th width="200px" fieldName="">Địa chỉ</th>
-              <th width="100px" fieldName="">Loại thẻ</th>
-              <th width="200px" fieldName="">Chủ thẻ</th>
-              <th width="150" fieldName="">Loại tiền</th>
-              <th width="150" fieldName="">Tiền hàng</th>
-              <th width="150" fieldName="">Giảm giá</th>
-              <th width="200px" fieldName="">Phí giao dịch</th>
-              <th width="150" fieldName="">Tổng tiền</th>
-              <th width="150" fieldName="">Trạng thái</th>
-              <th width="150" fieldName="">Setting</th>
-            </tr>
-          </thead>
-          <tbody id="render-data">
-            <tr class="filter-data">
-              <td>
-                <input style="width: 35px;" type="text" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-              <td>
-                <input style="width: 200px;" type="text" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <span>01</span>
-              </td>
-              <td>
-                <span>18/03/2021</span>
-              </td>
-              <td>
-                <span>20/03/2021</span>
-              </td>
-              <td>
-                <span>123456</span>
-              </td>
-              <td>
-                <span>654321</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>0366666666</span>
-              </td>
-              <td>
-                <span>ndbinh@gmail.com</span>
-              </td>
-              <td>
-                <span>Sóc Sơn, Hà Nội</span>
-              </td>
-              <td>
-                <span>VISA</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>1234 4321 4567 6543</span>
-              </td>
-              <td>
-                <span>VNĐ</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>Đang xử lý</span>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <span>01</span>
-              </td>
-              <td>
-                <span>18/03/2021</span>
-              </td>
-              <td>
-                <span>20/03/2021</span>
-              </td>
-              <td>
-                <span>123456</span>
-              </td>
-              <td>
-                <span>654321</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>0366666666</span>
-              </td>
-              <td>
-                <span>ndbinh@gmail.com</span>
-              </td>
-              <td>
-                <span>Sóc Sơn, Hà Nội</span>
-              </td>
-              <td>
-                <span>VISA</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>1234 4321 4567 6543</span>
-              </td>
-              <td>
-                <span>VNĐ</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>Đang xử lý</span>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <span>01</span>
-              </td>
-              <td>
-                <span>18/03/2021</span>
-              </td>
-              <td>
-                <span>20/03/2021</span>
-              </td>
-              <td>
-                <span>123456</span>
-              </td>
-              <td>
-                <span>654321</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>0366666666</span>
-              </td>
-              <td>
-                <span>ndbinh@gmail.com</span>
-              </td>
-              <td>
-                <span>Sóc Sơn, Hà Nội</span>
-              </td>
-              <td>
-                <span>VISA</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>1234 4321 4567 6543</span>
-              </td>
-              <td>
-                <span>VNĐ</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>Đang xử lý</span>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <span>01</span>
-              </td>
-              <td>
-                <span>18/03/2021</span>
-              </td>
-              <td>
-                <span>20/03/2021</span>
-              </td>
-              <td>
-                <span>123456</span>
-              </td>
-              <td>
-                <span>654321</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>0366666666</span>
-              </td>
-              <td>
-                <span>ndbinh@gmail.com</span>
-              </td>
-              <td>
-                <span>Sóc Sơn, Hà Nội</span>
-              </td>
-              <td>
-                <span>VISA</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>1234 4321 4567 6543</span>
-              </td>
-              <td>
-                <span>VNĐ</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>Đang xử lý</span>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <span>01</span>
-              </td>
-              <td>
-                <span>18/03/2021</span>
-              </td>
-              <td>
-                <span>20/03/2021</span>
-              </td>
-              <td>
-                <span>123456</span>
-              </td>
-              <td>
-                <span>654321</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>0366666666</span>
-              </td>
-              <td>
-                <span>ndbinh@gmail.com</span>
-              </td>
-              <td>
-                <span>Sóc Sơn, Hà Nội</span>
-              </td>
-              <td>
-                <span>VISA</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>1234 4321 4567 6543</span>
-              </td>
-              <td>
-                <span>VNĐ</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>Đang xử lý</span>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <span>01</span>
-              </td>
-              <td>
-                <span>18/03/2021</span>
-              </td>
-              <td>
-                <span>20/03/2021</span>
-              </td>
-              <td>
-                <span>123456</span>
-              </td>
-              <td>
-                <span>654321</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>0366666666</span>
-              </td>
-              <td>
-                <span>ndbinh@gmail.com</span>
-              </td>
-              <td>
-                <span>Sóc Sơn, Hà Nội</span>
-              </td>
-              <td>
-                <span>VISA</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>1234 4321 4567 6543</span>
-              </td>
-              <td>
-                <span>VNĐ</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>Đang xử lý</span>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <span>01</span>
-              </td>
-              <td>
-                <span>18/03/2021</span>
-              </td>
-              <td>
-                <span>20/03/2021</span>
-              </td>
-              <td>
-                <span>123456</span>
-              </td>
-              <td>
-                <span>654321</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>0366666666</span>
-              </td>
-              <td>
-                <span>ndbinh@gmail.com</span>
-              </td>
-              <td>
-                <span>Sóc Sơn, Hà Nội</span>
-              </td>
-              <td>
-                <span>VISA</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>1234 4321 4567 6543</span>
-              </td>
-              <td>
-                <span>VNĐ</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>Đang xử lý</span>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <span>01</span>
-              </td>
-              <td>
-                <span>18/03/2021</span>
-              </td>
-              <td>
-                <span>20/03/2021</span>
-              </td>
-              <td>
-                <span>123456</span>
-              </td>
-              <td>
-                <span>654321</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>0366666666</span>
-              </td>
-              <td>
-                <span>ndbinh@gmail.com</span>
-              </td>
-              <td>
-                <span>Sóc Sơn, Hà Nội</span>
-              </td>
-              <td>
-                <span>VISA</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>1234 4321 4567 6543</span>
-              </td>
-              <td>
-                <span>VNĐ</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>Đang xử lý</span>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <span>01</span>
-              </td>
-              <td>
-                <span>18/03/2021</span>
-              </td>
-              <td>
-                <span>20/03/2021</span>
-              </td>
-              <td>
-                <span>123456</span>
-              </td>
-              <td>
-                <span>654321</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>0366666666</span>
-              </td>
-              <td>
-                <span>ndbinh@gmail.com</span>
-              </td>
-              <td>
-                <span>Sóc Sơn, Hà Nội</span>
-              </td>
-              <td>
-                <span>VISA</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>1234 4321 4567 6543</span>
-              </td>
-              <td>
-                <span>VNĐ</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>Đang xử lý</span>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <span>01</span>
-              </td>
-              <td>
-                <span>18/03/2021</span>
-              </td>
-              <td>
-                <span>20/03/2021</span>
-              </td>
-              <td>
-                <span>123456</span>
-              </td>
-              <td>
-                <span>654321</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>0366666666</span>
-              </td>
-              <td>
-                <span>ndbinh@gmail.com</span>
-              </td>
-              <td>
-                <span>Sóc Sơn, Hà Nội</span>
-              </td>
-              <td>
-                <span>VISA</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>1234 4321 4567 6543</span>
-              </td>
-              <td>
-                <span>VNĐ</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>Đang xử lý</span>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <span>01</span>
-              </td>
-              <td>
-                <span>18/03/2021</span>
-              </td>
-              <td>
-                <span>20/03/2021</span>
-              </td>
-              <td>
-                <span>123456</span>
-              </td>
-              <td>
-                <span>654321</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>0366666666</span>
-              </td>
-              <td>
-                <span>ndbinh@gmail.com</span>
-              </td>
-              <td>
-                <span>Sóc Sơn, Hà Nội</span>
-              </td>
-              <td>
-                <span>VISA</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>1234 4321 4567 6543</span>
-              </td>
-              <td>
-                <span>VNĐ</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>Đang xử lý</span>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <span>01</span>
-              </td>
-              <td>
-                <span>18/03/2021</span>
-              </td>
-              <td>
-                <span>20/03/2021</span>
-              </td>
-              <td>
-                <span>123456</span>
-              </td>
-              <td>
-                <span>654321</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>0366666666</span>
-              </td>
-              <td>
-                <span>ndbinh@gmail.com</span>
-              </td>
-              <td>
-                <span>Sóc Sơn, Hà Nội</span>
-              </td>
-              <td>
-                <span>VISA</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>1234 4321 4567 6543</span>
-              </td>
-              <td>
-                <span>VNĐ</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>Đang xử lý</span>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <span>01</span>
-              </td>
-              <td>
-                <span>18/03/2021</span>
-              </td>
-              <td>
-                <span>20/03/2021</span>
-              </td>
-              <td>
-                <span>123456</span>
-              </td>
-              <td>
-                <span>654321</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>0366666666</span>
-              </td>
-              <td>
-                <span>ndbinh@gmail.com</span>
-              </td>
-              <td>
-                <span>Sóc Sơn, Hà Nội</span>
-              </td>
-              <td>
-                <span>VISA</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>1234 4321 4567 6543</span>
-              </td>
-              <td>
-                <span>VNĐ</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>Đang xử lý</span>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <span>01</span>
-              </td>
-              <td>
-                <span>18/03/2021</span>
-              </td>
-              <td>
-                <span>20/03/2021</span>
-              </td>
-              <td>
-                <span>123456</span>
-              </td>
-              <td>
-                <span>654321</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>0366666666</span>
-              </td>
-              <td>
-                <span>ndbinh@gmail.com</span>
-              </td>
-              <td>
-                <span>Sóc Sơn, Hà Nội</span>
-              </td>
-              <td>
-                <span>VISA</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>1234 4321 4567 6543</span>
-              </td>
-              <td>
-                <span>VNĐ</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>Đang xử lý</span>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <span>01</span>
-              </td>
-              <td>
-                <span>18/03/2021</span>
-              </td>
-              <td>
-                <span>20/03/2021</span>
-              </td>
-              <td>
-                <span>123456</span>
-              </td>
-              <td>
-                <span>654321</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>0366666666</span>
-              </td>
-              <td>
-                <span>ndbinh@gmail.com</span>
-              </td>
-              <td>
-                <span>Sóc Sơn, Hà Nội</span>
-              </td>
-              <td>
-                <span>VISA</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>1234 4321 4567 6543</span>
-              </td>
-              <td>
-                <span>VNĐ</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>Đang xử lý</span>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <span>01</span>
-              </td>
-              <td>
-                <span>18/03/2021</span>
-              </td>
-              <td>
-                <span>20/03/2021</span>
-              </td>
-              <td>
-                <span>123456</span>
-              </td>
-              <td>
-                <span>654321</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>0366666666</span>
-              </td>
-              <td>
-                <span>ndbinh@gmail.com</span>
-              </td>
-              <td>
-                <span>Sóc Sơn, Hà Nội</span>
-              </td>
-              <td>
-                <span>VISA</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>1234 4321 4567 6543</span>
-              </td>
-              <td>
-                <span>VNĐ</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>Đang xử lýyyy</span>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <span>01</span>
-              </td>
-              <td>
-                <span>18/03/2021</span>
-              </td>
-              <td>
-                <span>20/03/2021</span>
-              </td>
-              <td>
-                <span>123456</span>
-              </td>
-              <td>
-                <span>654321</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>0366666666</span>
-              </td>
-              <td>
-                <span>ndbinh@gmail.com</span>
-              </td>
-              <td>
-                <span>Sóc Sơn, Hà Nội</span>
-              </td>
-              <td>
-                <span>VISA</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>1234 4321 4567 6543</span>
-              </td>
-              <td>
-                <span>VNĐ</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>Đang xử lýyyy</span>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <span>01</span>
-              </td>
-              <td>
-                <span>18/03/2021</span>
-              </td>
-              <td>
-                <span>20/03/2021</span>
-              </td>
-              <td>
-                <span>123456</span>
-              </td>
-              <td>
-                <span>654321</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>0366666666</span>
-              </td>
-              <td>
-                <span>ndbinh@gmail.com</span>
-              </td>
-              <td>
-                <span>Sóc Sơn, Hà Nội</span>
-              </td>
-              <td>
-                <span>VISA</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>1234 4321 4567 6543</span>
-              </td>
-              <td>
-                <span>VNĐ</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>Đang xử lýyyy</span>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <span>01</span>
-              </td>
-              <td>
-                <span>18/03/2021</span>
-              </td>
-              <td>
-                <span>20/03/2021</span>
-              </td>
-              <td>
-                <span>123456</span>
-              </td>
-              <td>
-                <span>654321</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>0366666666</span>
-              </td>
-              <td>
-                <span>ndbinh@gmail.com</span>
-              </td>
-              <td>
-                <span>Sóc Sơn, Hà Nội</span>
-              </td>
-              <td>
-                <span>VISA</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>1234 4321 4567 6543</span>
-              </td>
-              <td>
-                <span>VNĐ</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>Đang xử lýyyy</span>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <span>01</span>
-              </td>
-              <td>
-                <span>18/03/2021</span>
-              </td>
-              <td>
-                <span>20/03/2021</span>
-              </td>
-              <td>
-                <span>123456</span>
-              </td>
-              <td>
-                <span>654321</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>0366666666</span>
-              </td>
-              <td>
-                <span>ndbinh@gmail.com</span>
-              </td>
-              <td>
-                <span>Sóc Sơn, Hà Nội</span>
-              </td>
-              <td>
-                <span>VISA</span>
-              </td>
-              <td>
-                <span>Nguyễn Đức Bình</span>
-              </td>
-              <td>
-                <span>1234 4321 4567 6543</span>
-              </td>
-              <td>
-                <span>VNĐ</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>100.000.000</span>
-              </td>
-              <td>
-                <span>Đang xử lýyyy</span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <!-- end data table -->
-      <div class="paging-bar">
-        <div class="paging-left">Hiển thị 1-10/120 Khách hàng</div>
-      </div>
-      <!-- end transaction content -->
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import Header from "../components/Header.vue";
+import SlideBar from "../components/SlideBar.vue";
+export default {
+  components: { Header, SlideBar },
+};
 </script>
 
 <style>
 * {
-  margin: 0;
+  margin:0;
   padding: 0;
 }
 .main {
   background-color: antiquewhite;
+  display: flex;
+}
+.main-right {
+  width: calc(100% - 250px);
+  min-width: 1116px;
 }
 .transaction-details {
-  min-width: 1366px;
   padding-top: 14px;
   padding-left: 20px;
   padding-right: 20px;
-
   font-family: "GoogleSans Regular";
+  border: 1px solid #74757c;
 }
 .line {
   margin-top: 17px;
@@ -1321,15 +1333,14 @@ export default {};
   font-size: 14px;
 }
 .transaction-details {
-  width: calc(100% - 250px);
-  min-width: 1366px;
+  /* width: calc(100% - 250px);
+  min-width: 1116px; */
   background-color: #ffffff;
 }
 .line {
   border-bottom: 1px solid #d9dade;
 }
-.transaction-content {
-}
+
 /* css cho group money */
 .group-money {
   display: flex;
@@ -1362,7 +1373,7 @@ export default {};
 Css cho data-table
 */
 .data-table {
-  height: calc(100vh - 226px);
+  height: calc(100vh - 237px);
   overflow: scroll;
   margin-top: 12px;
   overflow-x: auto;
@@ -1425,7 +1436,7 @@ tbody tr:hover {
 }
 .paging-bar {
   display: flex;
-  height: 50px;
+  height: 40px;
   background-color: #ffffff;
   justify-content: space-between;
   width: 100%;
