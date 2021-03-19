@@ -172,6 +172,7 @@ export default {
   border-bottom: 1px solid #d9dade;
 }
 .transaction-content {
+  height: calc(100vh - 139px);
   display: flex;
 }
 /* css cho customer */
