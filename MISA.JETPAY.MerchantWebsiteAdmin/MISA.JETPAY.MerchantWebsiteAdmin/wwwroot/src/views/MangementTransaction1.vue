@@ -1,490 +1,487 @@
 <template>
   <div class="main">
-    <SlideBar />
-    <div class="main-right">
-      <Header />
-      <div class="transaction-details">
-        <div class="title">Quản lý giao dịch thanh toán</div>
-        <!-- transaction content -->
-        <div class="transaction-content">
-          <!-- btn group -->
-          <div class="filter-form">
-            <div clas="left-filter">
-              <div class="select-time">
-                <div class="select-text">Tháng này</div>
-                <div class="icon-down">
-                  <img src="../assets/icons/1x/Icon-Down.png" />
-                </div>
-              </div>
-            </div>
-            <div class="icon-right-filter">
-              <div class="icon-export-file">
-                <button title="Cập nhật dữ liệu">
-                  <img src="../assets/icons/1x/Icon-export-file.png" />
-                </button>
-              </div>
-              <div class="icon-refresh">
-                <button title="Cập nhật dữ liệu">
-                  <img src="../assets/icons/1x/Icon-Refresh.png" />
-                </button>
+    <layout></layout>
+    <div class="transaction-details">
+      <div class="title">Quản lý giao dịch thanh toán</div>
+      <!-- transaction content -->
+      <div class="transaction-content">
+        <!-- btn group -->
+        <div class="filter-form">
+          <div clas="left-filter">
+            <div class="select-time">
+              <div class="select-text">Tháng này</div>
+              <div class="icon-down">
+                <img src="../assets/icons/1x/Icon-Down.png" />
               </div>
             </div>
           </div>
-          <!-- and btn group -->
-          <!-- group money -->
-          <div class="group-money">
-            <div class="money-left">
-              <div class="m-col">
-                <div class="m-icon">Σ</div>
-                <div class="m-text">Tiền hàng:</div>
-                <div class="m-money">100.000.000</div>
-              </div>
-              <div class="m-col">
-                <div class="m-icon">Σ</div>
-                <div class="m-text">Giảm giá:</div>
-                <div class="m-money">100.000.000</div>
-              </div>
-              <div class="m-col">
-                <div class="m-icon">Σ</div>
-                <div class="m-text">Phí giao dịch:</div>
-                <div class="m-money">100.000.000</div>
-              </div>
-              <div class="m-col">
-                <div class="m-icon">Σ</div>
-                <div class="m-text">Tiền thanh toán:</div>
-                <div class="m-money">100.000.000</div>
-              </div>
+          <div class="icon-right-filter">
+            <div class="icon-export-file">
+              <button title="Cập nhật dữ liệu">
+                <img src="../assets/icons/1x/Icon-export-file.png" />
+              </button>
             </div>
-            <div class="money-right">
-              <div class="m-col m-col1">
-                <div class="m-text">Đơn vị:</div>
-                <div class="m-money">VNĐ</div>
-              </div>
+            <div class="icon-refresh">
+              <button title="Cập nhật dữ liệu">
+                <img src="../assets/icons/1x/Icon-Refresh.png" />
+              </button>
             </div>
           </div>
-          <!-- end group money -->
         </div>
-        <!-- data table -->
-        <div class="data-table">
-          <div class="loader"></div>
-          <table class="table">
-            <colgroup>
-              <col width="3%" />
-              <col width="15%" />
-              <col width="15%" />
-              <col width="18%" />
-              <col width="23%" />
-              <col width="15%" />
-              <col width="10%" />
-              <col width="5%" />
-            </colgroup>
-            <thead>
-              <tr>
-                <th fieldName="" style="padding-left: 6px">STT</th>
-                <th fieldName="">Ngày tháng</th>
-                <th fieldName="">Mã giao dịch/Mã đơn hàng</th>
-                <th fieldName="">Khách hàng</th>
-                <th fieldName="">Thông tin thẻ</th>
-                <th fieldName="">Số tiền</th>
-                <th fieldName="">Trạng thái</th>
-                <th fieldName="" v-on:click="activePopup = !activePopup">
-                  <img src="../assets/icons/1x/Icon-Setting.png" />
-                </th>
-              </tr>
-            </thead>
-            <tbody id="render-data">
-              <tr class="filter-data">
-                <td>
-                  <input style="width: 35px" type="text" />
-                </td>
-                <td>
-                  <input type="text" />
-                </td>
-                <td>
-                  <input type="text" />
-                </td>
-                <td>
-                  <input type="text" />
-                </td>
-                <td>
-                  <input type="text" />
-                </td>
-                <td>
-                  <input type="text" />
-                </td>
-                <td>
-                  <input type="text" />
-                </td>
-                <td></td>
-              </tr>
-              <tr
-                class="m-tr-content"
-                v-on:dblclick="() => $router.push('/transaction-details')"
-              >
-                <td>
-                  <span>01</span>
-                </td>
-                <td>
-                  <div class="m-row">
-                    <div class="m-lable lable-date">Ngày thanh toán</div>
-                    <div class="m-text">19/03/2021</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable lable-date">Ngày đơn hàng</div>
-                    <div class="m-text">19/03/2021</div>
-                  </div>
-                </td>
-                <td>
-                  <div class="m-row">
-                    <div class="m-lable">Mã giao dịch</div>
-                    <div class="m-text">123456</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable">Mã đơn hàng</div>
-                    <div class="m-text">6543211</div>
-                  </div>
-                </td>
-                <td>
-                  <div>Nguyễn Trường Giang</div>
-                  <div>0378914533</div>
-                  <div>giangnt@gmail.com</div>
-                  <div>Thanh Trì, Hà Nội, Việt Nam</div>
-                </td>
-                <td>
-                  <div class="m-row">
-                    <div class="m-lable lable-card">Loại thẻ</div>
-                    <div class="m-text">VISA</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable lable-card">Chủ thẻ</div>
-                    <div class="m-text">NGUYEN TRUONG GIANG</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable lable-card">Số thẻ</div>
-                    <div class="m-text">1234 5678 8765 3333</div>
-                  </div>
-                </td>
-                <td>
-                  <div class="m-row">
-                    <div class="m-lable lable-money">Loại tiền</div>
-                    <div class="m-text">VNĐ</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable lable-money">Tiền hàng</div>
-                    <div class="m-text">100.000.000</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable lable-money">Giảm giá</div>
-                    <div class="m-text">100.000.000</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable lable-money">Phí giao dịch</div>
-                    <div class="m-text">100.000.000</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable lable-money">Tổng tiền</div>
-                    <div class="m-text">100.000.000</div>
-                  </div>
-                </td>
-                <td>
-                  <div class="status status-wait-active">Chờ kích hoạt</div>
-                </td>
-                <td>
-                  <div><img src="../assets/icons/1x/Icon-More.png" /></div>
-                </td>
-              </tr>
-              <tr class="m-tr-content">
-                <td>
-                  <span>01</span>
-                </td>
-                <td>
-                  <div class="m-row">
-                    <div class="m-lable lable-date">Ngày thanh toán</div>
-                    <div class="m-text">19/03/2021</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable lable-date">Ngày đơn hàng</div>
-                    <div class="m-text">19/03/2021</div>
-                  </div>
-                </td>
-                <td>
-                  <div class="m-row">
-                    <div class="m-lable">Mã giao dịch</div>
-                    <div class="m-text">123456</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable">Mã đơn hàng</div>
-                    <div class="m-text">6543211</div>
-                  </div>
-                </td>
-                <td>
-                  <div>Nguyễn Trường Giang</div>
-                  <div>0378914533</div>
-                  <div>giangnt@gmail.com</div>
-                  <div>Thanh Trì, Hà Nội, Việt Nam</div>
-                </td>
-                <td>
-                  <div class="m-row">
-                    <div class="m-lable lable-card">Loại thẻ</div>
-                    <div class="m-text">VISA</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable lable-card">Chủ thẻ</div>
-                    <div class="m-text">NGUYEN TRUONG GIANG</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable lable-card">Số thẻ</div>
-                    <div class="m-text">1234 5678 8765 3333</div>
-                  </div>
-                </td>
-                <td>
-                  <div class="m-row">
-                    <div class="m-lable lable-money">Loại tiền</div>
-                    <div class="m-text">VNĐ</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable lable-money">Tiền hàng</div>
-                    <div class="m-text">100.000.000</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable lable-money">Giảm giá</div>
-                    <div class="m-text">100.000.000</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable lable-money">Phí giao dịch</div>
-                    <div class="m-text">100.000.000</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable lable-money">Tổng tiền</div>
-                    <div class="m-text">100.000.000</div>
-                  </div>
-                </td>
-                <td>
-                  <div class="status status-processing">Đang xử lý</div>
-                </td>
-                <td>
-                  <div><img src="../assets/icons/1x/Icon-More.png" /></div>
-                </td>
-              </tr>
-              <tr class="m-tr-content">
-                <td>
-                  <span>01</span>
-                </td>
-                <td>
-                  <div class="m-row">
-                    <div class="m-lable lable-date">Ngày thanh toán</div>
-                    <div class="m-text">19/03/2021</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable lable-date">Ngày đơn hàng</div>
-                    <div class="m-text">19/03/2021</div>
-                  </div>
-                </td>
-                <td>
-                  <div class="m-row">
-                    <div class="m-lable">Mã giao dịch</div>
-                    <div class="m-text">123456</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable">Mã đơn hàng</div>
-                    <div class="m-text">6543211</div>
-                  </div>
-                </td>
-                <td>
-                  <div>Nguyễn Trường Giang</div>
-                  <div>0378914533</div>
-                  <div>giangnt@gmail.com</div>
-                  <div>Thanh Trì, Hà Nội, Việt Nam</div>
-                </td>
-                <td>
-                  <div class="m-row">
-                    <div class="m-lable lable-card">Loại thẻ</div>
-                    <div class="m-text">VISA</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable lable-card">Chủ thẻ</div>
-                    <div class="m-text">NGUYEN TRUONG GIANG</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable lable-card">Số thẻ</div>
-                    <div class="m-text">1234 5678 8765 3333</div>
-                  </div>
-                </td>
-                <td>
-                  <div class="m-row">
-                    <div class="m-lable lable-money">Loại tiền</div>
-                    <div class="m-text">VNĐ</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable lable-money">Tiền hàng</div>
-                    <div class="m-text">100.000.000</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable lable-money">Giảm giá</div>
-                    <div class="m-text">100.000.000</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable lable-money">Phí giao dịch</div>
-                    <div class="m-text">100.000.000</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable lable-money">Tổng tiền</div>
-                    <div class="m-text">100.000.000</div>
-                  </div>
-                </td>
-                <td>
-                  <div class="status status-success">Thành công</div>
-                </td>
-                <td>
-                  <div><img src="../assets/icons/1x/Icon-More.png" /></div>
-                </td>
-              </tr>
-              <tr class="m-tr-content">
-                <td>
-                  <span>01</span>
-                </td>
-                <td>
-                  <div class="m-row">
-                    <div class="m-lable lable-date">Ngày thanh toán</div>
-                    <div class="m-text">19/03/2021</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable lable-date">Ngày đơn hàng</div>
-                    <div class="m-text">19/03/2021</div>
-                  </div>
-                </td>
-                <td>
-                  <div class="m-row">
-                    <div class="m-lable">Mã giao dịch</div>
-                    <div class="m-text">123456</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable">Mã đơn hàng</div>
-                    <div class="m-text">6543211</div>
-                  </div>
-                </td>
-                <td>
-                  <div>Nguyễn Trường Giang</div>
-                  <div>0378914533</div>
-                  <div>giangnt@gmail.com</div>
-                  <div>Thanh Trì, Hà Nội, Việt Nam</div>
-                </td>
-                <td>
-                  <div class="m-row">
-                    <div class="m-lable lable-card">Loại thẻ</div>
-                    <div class="m-text">VISA</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable lable-card">Chủ thẻ</div>
-                    <div class="m-text">NGUYEN TRUONG GIANG</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable lable-card">Số thẻ</div>
-                    <div class="m-text">1234 5678 8765 3333</div>
-                  </div>
-                </td>
-                <td>
-                  <div class="m-row">
-                    <div class="m-lable lable-money">Loại tiền</div>
-                    <div class="m-text">VNĐ</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable lable-money">Tiền hàng</div>
-                    <div class="m-text">100.000.000</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable lable-money">Giảm giá</div>
-                    <div class="m-text">100.000.000</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable lable-money">Phí giao dịch</div>
-                    <div class="m-text">100.000.000</div>
-                  </div>
-                  <div class="m-row">
-                    <div class="m-lable lable-money">Tổng tiền</div>
-                    <div class="m-text">100.000.000</div>
-                  </div>
-                </td>
-                <td>
-                  <div class="status status-error">Thẻ bị từ chối</div>
-                </td>
-                <td>
-                  <div><img src="../assets/icons/1x/Icon-More.png" /></div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- and btn group -->
+        <!-- group money -->
+        <div class="group-money">
+          <div class="money-left">
+            <div class="m-col">
+              <div class="m-icon">Σ</div>
+              <div class="m-text">Tiền hàng:</div>
+              <div class="m-money">100.000.000</div>
+            </div>
+            <div class="m-col">
+              <div class="m-icon">Σ</div>
+              <div class="m-text">Giảm giá:</div>
+              <div class="m-money">100.000.000</div>
+            </div>
+            <div class="m-col">
+              <div class="m-icon">Σ</div>
+              <div class="m-text">Phí giao dịch:</div>
+              <div class="m-money">100.000.000</div>
+            </div>
+            <div class="m-col">
+              <div class="m-icon">Σ</div>
+              <div class="m-text">Tiền thanh toán:</div>
+              <div class="m-money">100.000.000</div>
+            </div>
+          </div>
+          <div class="money-right">
+            <div class="m-col m-col1">
+              <div class="m-text">Đơn vị:</div>
+              <div class="m-money">VNĐ</div>
+            </div>
+          </div>
+        </div>
+        <!-- end group money -->
+      </div>
+      <!-- data table -->
+      <div class="data-table">
+        <div class="loader"></div>
+        <table class="table">
           <!-- popup information -->
-          <div class="popup-infomation" v-if="activePopup">
-            <div class="popup-title">Quản lý cột</div>
-            <div class="display-type">
-              <div class="d-lable">Kiểu hiển thị</div>
+        <div class="popup-infomation" v-if="activePopup">
+          <div class="popup-title">Quản lý cột</div>
+          <div class="display-type">
+            <div class="d-lable">Kiểu hiển thị</div>
+            <div class="col-item">
+              <div class="col-text">Nhóm thông tin</div>
+              <input type="checkbox" id="switch1" /><label for="switch1"
+                >Toggle</label
+              >
+            </div>
+          </div>
+          <div class="display-col">
+            <div class="d-lable">Cột</div>
+            <div class="col-content">
               <div class="col-item">
-                <div class="col-text">Nhóm thông tin</div>
-                <input type="checkbox" id="switch1" /><label for="switch1"
+                <div class="col-text">Ngày tháng</div>
+                <input type="checkbox" id="switch2" /><label for="switch2"
+                  >Toggle</label
+                >
+              </div>
+              <div class="col-item">
+                <div class="col-text">Mã giao dịch/Mã đơn hàng</div>
+                <input type="checkbox" id="switch3" /><label for="switch3"
+                  >Toggle</label
+                >
+              </div>
+              <div class="col-item">
+                <div class="col-text">Khách hàng</div>
+                <input type="checkbox" id="switch4" /><label for="switch4"
+                  >Toggle</label
+                >
+              </div>
+              <div class="col-item">
+                <div class="col-text">Thông tin thẻ</div>
+                <input type="checkbox" id="switch5" /><label for="switch5"
+                  >Toggle</label
+                >
+              </div>
+              <div class="col-item">
+                <div class="col-text">Số tiền</div>
+                <input type="checkbox" id="switch6" /><label for="switch6"
+                  >Toggle</label
+                >
+              </div>
+              <div class="col-item">
+                <div class="col-text">Trạng thái</div>
+                <input type="checkbox" id="switch7" /><label for="switch7"
                   >Toggle</label
                 >
               </div>
             </div>
-            <div class="display-col">
-              <div class="d-lable">Cột</div>
-              <div class="col-content">
-                <div class="col-item">
-                  <div class="col-text">Ngày tháng</div>
-                  <input type="checkbox" id="switch2" /><label for="switch2"
-                    >Toggle</label
-                  >
-                </div>
-                <div class="col-item">
-                  <div class="col-text">Mã giao dịch/Mã đơn hàng</div>
-                  <input type="checkbox" id="switch3" /><label for="switch3"
-                    >Toggle</label
-                  >
-                </div>
-                <div class="col-item">
-                  <div class="col-text">Khách hàng</div>
-                  <input type="checkbox" id="switch4" /><label for="switch4"
-                    >Toggle</label
-                  >
-                </div>
-                <div class="col-item">
-                  <div class="col-text">Thông tin thẻ</div>
-                  <input type="checkbox" id="switch5" /><label for="switch5"
-                    >Toggle</label
-                  >
-                </div>
-                <div class="col-item">
-                  <div class="col-text">Số tiền</div>
-                  <input type="checkbox" id="switch6" /><label for="switch6"
-                    >Toggle</label
-                  >
-                </div>
-                <div class="col-item">
-                  <div class="col-text">Trạng thái</div>
-                  <input type="checkbox" id="switch7" /><label for="switch7"
-                    >Toggle</label
-                  >
-                </div>
-              </div>
-            </div>
           </div>
-          <!-- end popup information -->
         </div>
-        <!-- end data table -->
-        <div class="paging-bar">
-          <div class="paging-left">Hiển thị 1-10/120 Khách hàng</div>
-        </div>
-        <!-- end transaction content -->
+        <!-- end popup information -->
+          <colgroup>
+            <col width="3%" />
+            <col width="15%" />
+            <col width="15%" />
+            <col width="18%" />
+            <col width="23%" />
+            <col width="15%" />
+            <col width="10%" />
+            <col width="5%" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th fieldName="" style="padding-left: 6px">STT</th>
+              <th fieldName="">Ngày tháng</th>
+              <th fieldName="">Mã giao dịch/Mã đơn hàng</th>
+              <th fieldName="">Khách hàng</th>
+              <th fieldName="">Thông tin thẻ</th>
+              <th fieldName="">Số tiền</th>
+              <th fieldName="">Trạng thái</th>
+              <th fieldName="" v-on:click="activePopup = !activePopup">
+                <img src="../assets/icons/1x/Icon-Setting.png" />
+              </th>
+            </tr>
+          </thead>
+          <tbody id="render-data">
+            <tr class="filter-data">
+              <td>
+                <input style="width: 35px" type="text" />
+              </td>
+              <td>
+                <input type="text" />
+              </td>
+              <td>
+                <input type="text" />
+              </td>
+              <td>
+                <input type="text" />
+              </td>
+              <td>
+                <input type="text" />
+              </td>
+              <td>
+                <input type="text" />
+              </td>
+              <td>
+                <input type="text" />
+              </td>
+              <td></td>
+            </tr>
+            <tr
+              class="m-tr-content"
+              v-on:dblclick="() => $router.push('/transaction-details')"
+            >
+              <td>
+                <span>01</span>
+              </td>
+              <td>
+                <div class="m-row">
+                  <div class="m-lable lable-date">Ngày thanh toán</div>
+                  <div class="m-text">19/03/2021</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable lable-date">Ngày đơn hàng</div>
+                  <div class="m-text">19/03/2021</div>
+                </div>
+              </td>
+              <td>
+                <div class="m-row">
+                  <div class="m-lable">Mã giao dịch</div>
+                  <div class="m-text">123456</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable">Mã đơn hàng</div>
+                  <div class="m-text">6543211</div>
+                </div>
+              </td>
+              <td>
+                <div>Nguyễn Trường Giang</div>
+                <div>0378914533</div>
+                <div>giangnt@gmail.com</div>
+                <div>Thanh Trì, Hà Nội, Việt Nam</div>
+              </td>
+              <td>
+                <div class="m-row">
+                  <div class="m-lable lable-card">Loại thẻ</div>
+                  <div class="m-text">VISA</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable lable-card">Chủ thẻ</div>
+                  <div class="m-text">NGUYEN TRUONG GIANG</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable lable-card">Số thẻ</div>
+                  <div class="m-text">1234 5678 8765 3333</div>
+                </div>
+              </td>
+              <td>
+                <div class="m-row">
+                  <div class="m-lable lable-money">Loại tiền</div>
+                  <div class="m-text">VNĐ</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable lable-money">Tiền hàng</div>
+                  <div class="m-text">100.000.000</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable lable-money">Giảm giá</div>
+                  <div class="m-text">100.000.000</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable lable-money">Phí giao dịch</div>
+                  <div class="m-text">100.000.000</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable lable-money">Tổng tiền</div>
+                  <div class="m-text">100.000.000</div>
+                </div>
+              </td>
+              <td>
+                <div class="status status-wait-active">Chờ kích hoạt</div>
+              </td>
+              <td>
+                <div><img src="../assets/icons/1x/Icon-More.png" /></div>
+              </td>
+            </tr>
+            <tr class="m-tr-content">
+              <td>
+                <span>01</span>
+              </td>
+              <td>
+                <div class="m-row">
+                  <div class="m-lable lable-date">Ngày thanh toán</div>
+                  <div class="m-text">19/03/2021</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable lable-date">Ngày đơn hàng</div>
+                  <div class="m-text">19/03/2021</div>
+                </div>
+              </td>
+              <td>
+                <div class="m-row">
+                  <div class="m-lable">Mã giao dịch</div>
+                  <div class="m-text">123456</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable">Mã đơn hàng</div>
+                  <div class="m-text">6543211</div>
+                </div>
+              </td>
+              <td>
+                <div>Nguyễn Trường Giang</div>
+                <div>0378914533</div>
+                <div>giangnt@gmail.com</div>
+                <div>Thanh Trì, Hà Nội, Việt Nam</div>
+              </td>
+              <td>
+                <div class="m-row">
+                  <div class="m-lable lable-card">Loại thẻ</div>
+                  <div class="m-text">VISA</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable lable-card">Chủ thẻ</div>
+                  <div class="m-text">NGUYEN TRUONG GIANG</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable lable-card">Số thẻ</div>
+                  <div class="m-text">1234 5678 8765 3333</div>
+                </div>
+              </td>
+              <td>
+                <div class="m-row">
+                  <div class="m-lable lable-money">Loại tiền</div>
+                  <div class="m-text">VNĐ</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable lable-money">Tiền hàng</div>
+                  <div class="m-text">100.000.000</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable lable-money">Giảm giá</div>
+                  <div class="m-text">100.000.000</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable lable-money">Phí giao dịch</div>
+                  <div class="m-text">100.000.000</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable lable-money">Tổng tiền</div>
+                  <div class="m-text">100.000.000</div>
+                </div>
+              </td>
+              <td>
+                <div class="status status-processing">Đang xử lý</div>
+              </td>
+              <td>
+                <div><img src="../assets/icons/1x/Icon-More.png" /></div>
+              </td>
+            </tr>
+            <tr class="m-tr-content">
+              <td>
+                <span>01</span>
+              </td>
+              <td>
+                <div class="m-row">
+                  <div class="m-lable lable-date">Ngày thanh toán</div>
+                  <div class="m-text">19/03/2021</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable lable-date">Ngày đơn hàng</div>
+                  <div class="m-text">19/03/2021</div>
+                </div>
+              </td>
+              <td>
+                <div class="m-row">
+                  <div class="m-lable">Mã giao dịch</div>
+                  <div class="m-text">123456</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable">Mã đơn hàng</div>
+                  <div class="m-text">6543211</div>
+                </div>
+              </td>
+              <td>
+                <div>Nguyễn Trường Giang</div>
+                <div>0378914533</div>
+                <div>giangnt@gmail.com</div>
+                <div>Thanh Trì, Hà Nội, Việt Nam</div>
+              </td>
+              <td>
+                <div class="m-row">
+                  <div class="m-lable lable-card">Loại thẻ</div>
+                  <div class="m-text">VISA</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable lable-card">Chủ thẻ</div>
+                  <div class="m-text">NGUYEN TRUONG GIANG</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable lable-card">Số thẻ</div>
+                  <div class="m-text">1234 5678 8765 3333</div>
+                </div>
+              </td>
+              <td>
+                <div class="m-row">
+                  <div class="m-lable lable-money">Loại tiền</div>
+                  <div class="m-text">VNĐ</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable lable-money">Tiền hàng</div>
+                  <div class="m-text">100.000.000</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable lable-money">Giảm giá</div>
+                  <div class="m-text">100.000.000</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable lable-money">Phí giao dịch</div>
+                  <div class="m-text">100.000.000</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable lable-money">Tổng tiền</div>
+                  <div class="m-text">100.000.000</div>
+                </div>
+              </td>
+              <td>
+                <div class="status status-success">Thành công</div>
+              </td>
+              <td>
+                <div><img src="../assets/icons/1x/Icon-More.png" /></div>
+              </td>
+            </tr>
+            <tr class="m-tr-content">
+              <td>
+                <span>01</span>
+              </td>
+              <td>
+                <div class="m-row">
+                  <div class="m-lable lable-date">Ngày thanh toán</div>
+                  <div class="m-text">19/03/2021</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable lable-date">Ngày đơn hàng</div>
+                  <div class="m-text">19/03/2021</div>
+                </div>
+              </td>
+              <td>
+                <div class="m-row">
+                  <div class="m-lable">Mã giao dịch</div>
+                  <div class="m-text">123456</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable">Mã đơn hàng</div>
+                  <div class="m-text">6543211</div>
+                </div>
+              </td>
+              <td>
+                <div>Nguyễn Trường Giang</div>
+                <div>0378914533</div>
+                <div>giangnt@gmail.com</div>
+                <div>Thanh Trì, Hà Nội, Việt Nam</div>
+              </td>
+              <td>
+                <div class="m-row">
+                  <div class="m-lable lable-card">Loại thẻ</div>
+                  <div class="m-text">VISA</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable lable-card">Chủ thẻ</div>
+                  <div class="m-text">NGUYEN TRUONG GIANG</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable lable-card">Số thẻ</div>
+                  <div class="m-text">1234 5678 8765 3333</div>
+                </div>
+              </td>
+              <td>
+                <div class="m-row">
+                  <div class="m-lable lable-money">Loại tiền</div>
+                  <div class="m-text">VNĐ</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable lable-money">Tiền hàng</div>
+                  <div class="m-text">100.000.000</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable lable-money">Giảm giá</div>
+                  <div class="m-text">100.000.000</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable lable-money">Phí giao dịch</div>
+                  <div class="m-text">100.000.000</div>
+                </div>
+                <div class="m-row">
+                  <div class="m-lable lable-money">Tổng tiền</div>
+                  <div class="m-text">100.000.000</div>
+                </div>
+              </td>
+              <td>
+                <div class="status status-error">Thẻ bị từ chối</div>
+              </td>
+              <td>
+                <div><img src="../assets/icons/1x/Icon-More.png" /></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        
       </div>
+      <!-- end data table -->
+      <div class="paging-bar">
+        <div class="paging-left">Hiển thị 1-10/120 Khách hàng</div>
+      </div>
+      <!-- end transaction content -->
     </div>
   </div>
 </template>
 
 <script>
-import Header from "../components/Header.vue";
-import SlideBar from "../components/SlideBar.vue";
+import Layout from "../components/Layout.vue";
 export default {
-  components: { Header, SlideBar },
+  components: { Layout },
   data() {
     return {
       activePopup: false,
@@ -501,6 +498,11 @@ export default {
 .main {
   background-color: antiquewhite;
   display: flex;
+    position: absolute;
+  top: 56px;
+  left: 240px;
+  bottom: 50px;
+  width: 100%;
 }
 .main-right {
   width: calc(100% - 250px);
@@ -510,8 +512,8 @@ export default {
   padding-top: 14px;
   padding-left: 20px;
   padding-right: 20px;
+  width: calc(100% - 282px);
   font-family: "GoogleSans Regular";
-  border: 1px solid #74757c;
 }
 .line {
   margin-top: 17px;
@@ -603,7 +605,7 @@ export default {
 /**
 Css cho data-table
 */
-.data-table {
+table {
   position: relative;
 }
 .data-table .table .filter-data td {
